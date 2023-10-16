@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request, jsonify
-from models import Rental, Restaurant, Connector
+
 from app import app, db
 import json
 
-from pandas_geojson import to_geojson
-
+from models import Rental, Restaurant, Connector
 
 #a simple initial greeting
 @app.route('/', methods = ["GET", "POST"])

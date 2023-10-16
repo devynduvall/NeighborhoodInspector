@@ -1,7 +1,6 @@
 import mysql.connector
 import pandas as pd
 import requests
-google_key = "AIzaSyCTXCSpjX0RJZC-L6xF97_tWq1NkLKXFZg"
 
 cols = ['ID', 'ADDRESS', 'PRICE', 'BEDS', 'BATHS', 'SQFT', 'NAME', 'LAT', 'LON']
 
@@ -15,7 +14,7 @@ rental_restaurant = pd.read_csv('Data/Rental_Restaurant.2023-02-02.csv').fillna(
 
 #establishing the connection
 conn = mysql.connector.connect(
-   user='admin', password='#Pass123456', host='main.c9mxtcnylbeh.us-west-2.rds.amazonaws.com', database='rentalrestaurant')
+   user='root', password='#1234abcd', host='localhost', database='rentalrestaurant')
 
 #Creating a cursor object using the cursor() method
 cursor = conn.cursor()
