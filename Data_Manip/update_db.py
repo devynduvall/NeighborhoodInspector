@@ -2,15 +2,16 @@ import mysql.connector
 import pandas as pd
 import requests
 
+
 cols = ['ID', 'ADDRESS', 'PRICE', 'BEDS', 'BATHS', 'SQFT', 'NAME', 'LAT', 'LON']
 
-rental = pd.read_csv('Data/Rental.2023-02-02.csv').fillna(0)
+rental = pd.read_csv('Data_Manip/Data/Rental.2023-02-02.csv').fillna(0)
 
 rental_filter = rental[['property_id', 'address', 'price_raw', 'beds', 'baths', 'sqft', 'name', 'lat', 'lon']]
 
 rental_filter.columns = cols
 
-rental_restaurant = pd.read_csv('Data/Rental_Restaurant.2023-02-02.csv').fillna(0)
+rental_restaurant = pd.read_csv('Data_Manip/Data/Rental_Restaurant.2023-02-02.csv').fillna(0)
 
 #establishing the connection
 conn = mysql.connector.connect(
@@ -34,15 +35,15 @@ for index, row in rental.iterrows():
    #location = str(row['lat']) + "," + str(row['lon'])
    #radius = 400
    #type = 'restaurant'
-    
+   
    #url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&type={type}&key={google_key}"
-    
+   
    # make the request
    #response = requests.get(url)
 
    # extract the results
    #json_results = response.json()
-        
+      
    #df_results = pd.json_normalize(data=json_results['results'])\
    #df_results['property_id'] = row['property_id']
 
@@ -72,3 +73,4 @@ for index, row in rental.iterrows():
 conn.commit()
 cursor.close()
 conn.close()
+
