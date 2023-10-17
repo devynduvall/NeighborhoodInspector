@@ -18,15 +18,10 @@ def index():
        marker_id = request.form["marker_id"]
        print(marker_id)
 
-       
-
        data = Restaurant.query.filter_by(id = Connector.query.filter_by(rental_id = marker_id))
        print("quieried database for marker matches")
 
-    print(data)
-    # print(rent)
-    print("--------------------")
-    #print(rent[0].id)
+    print(rent[0].id)
     return render_template('index.html', markers = rent, marker_match = marker_id, marker_match_data = data)
 
 
@@ -57,7 +52,7 @@ def get_marker_points(marker_id):
             for point in data
         ]
     }
-    print(feature_collection)
+    
     # Return the serialized data to the client-side JavaScript code
     return jsonify(feature_collection)
 
