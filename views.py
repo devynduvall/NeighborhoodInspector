@@ -17,11 +17,7 @@ def index():
     if request.method == "POST":
        marker_id = request.form["marker_id"]
        print(marker_id)
-
        data = Restaurant.query.filter_by(id = Connector.query.filter_by(rental_id = marker_id))
-       print("quieried database for marker matches")
-
-    print(rent[0].id)
     return render_template('index.html', markers = rent, marker_match = marker_id, marker_match_data = data)
 
 
@@ -29,9 +25,8 @@ def index():
 def get_marker_points(marker_id):
     # Use SQLAlchemy to query the database for additional points based on marker_id
     subquery = (
-        db.session.query(Connector.id).filter(Connector.rental_id == marker_id)
+        db.session.query(Connector.restaurant_id).filter(Connector.rental_id == marker_id)
     )
-    print(subquery)
     data = (
         db.session.query(Restaurant).filter(Restaurant.id.in_(subquery)).all()
     )
@@ -52,18 +47,17 @@ def get_marker_points(marker_id):
             for point in data
         ]
     }
-    
     # Return the serialized data to the client-side JavaScript code
     return jsonify(feature_collection)
 
+@app.route('/search', methods=['POST'])
+def search():
+    search_term = request.form['search_term']
+    data = Rental.query.filter(Rental.address.like(search_term)).all()
+    print(data)
+    # Process the search term here (e.g., query a database)
+    return f"Search term: {data}"
 
-#@views.route('/marker-selected/<int:marker_id>')
-#def marker_selected(marker_id):
-  # Query the database for data related to the selected marker
-#  data = Restaurant.query.filter_by(id = Connector.query.filter_by(rental_id = marker_id))
-
-  # Convert the data to a dictionary that can be returned as JSON
-
-
-  # Return the JSON data
-#  return render_template('index.html', rest_marker = data)
+@app.route('/about')
+def about():
+    return render_template('about.html')

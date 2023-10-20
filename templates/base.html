@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurants Around Rental Properties</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/main.css') }}"/>
+    {% block styles %} {% endblock %}
+    
+</head>
+</head>
+<body>
+    <div>
+        <nav>
+            <a href="index">Home</a>
+            <a href="map">Map</a>
+            <a href="about">About</a>
+        </nav>
+    </div>
+
+    {% block map %} {% endblock %}
+</body>
+</html>
