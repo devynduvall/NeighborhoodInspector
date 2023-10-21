@@ -1,4 +1,4 @@
-body {
+body, h1, h2 {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -53,3 +53,6 @@ div nav a.active {
     background-color: #4CAF50;
     color: white;
 }
+
+
+/* Popups */

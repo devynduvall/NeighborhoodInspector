@@ -1,19 +1,17 @@
 {% extends 'base.html' %}
 
 {% block styles %}
+    <!-- Include Leaflet and jQuery libraries -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
+    <!-- End of Leaflet and jQuery libraries -->
 {% endblock %}
 
-
-
 {% block map %}
+<!-- Search bar container -->
 <div class="search-container">
   <form action="/search" method="POST">
     <input type="text" placeholder="Search.." name="search_term">
@@ -21,116 +19,129 @@
   </form>
 </div>
 
-  <div id="map"></div>
+<!-- Map container -->
+<div id="map"></div>
 
-  <div class="marker-details"></div>
-  <script>
-    // Sets the view and map object
-    const map = L.map('map').setView([47.60923991620634, -122.33245780856687], 13);
+<!-- Marker details container -->
+<div class="marker-details">
+  <h1 id="name"></h1>
+  <h2 id="address"></h2>
+  <p><strong>Rating:</strong> <span id="rating"></span></p>
+  <p><strong>Phone:</strong> <span id="phone"></span></p>
+  <p><strong>Website:</strong> <span id="website"></span></p>
+</div>
 
-    // Initiallizes the map with the given layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+<script>
+// Sets the view and map object
+const map = L.map('map').setView([47.60923991620634, -122.33245780856687], 13);
 
-    function addMarker(id, lat, lon){
-        // Add marker to map at click location; add popup window
-        var newMarker = new L.marker([lat, lon]).addTo(map).on('click', function() {
-          $.post("/", {
-            marker_id: id
-          });
+// Initiallizes the map with the given layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-          fetchMarkerPoints(id);
-
-        });
-      }
-
-    let lastLayer;
-
-    function fetchMarkerPoints(markerId) {
-      if (lastLayer) {
-        map.removeLayer(lastLayer);
-      }
-      
-      fetch(`/marker/${markerId}/points`)
-        .then(response => response.json())
-        .then(data => {
-            const layerStyle = {
-            fillColor: 'red' // Change the color to red
-          };
-
-          // Add the additional points to the Leaflet map
-          lastLayer = L.geoJSON(data, {
-            style: layerStyle // Apply the style to the new layer
-          }).addTo(map);
-
-        })
-        .catch(error => {
-          console.error('Error fetching marker points:', error);
-        });
-    }
-
-
-    function onMarkerSelected(markerId) {
-      // Get the ID of the selected marker
-      print(markerId)
-      // Make an HTTP request to Flask to get updated data
-      fetch('/marker-selected/' + markerId)
-        .then(function(response) {
-          return response;
-        })
-        .then(function(data) {
-          console.log(data)
-          // Update the HTML template with the updated data
-          // (Assuming you have a function called "updateTemplate" that updates the HTML)
-          // updateTemplate(data);
-        });
-    }
-
-    function updateTemplate(data) {
-      // Update the HTML template with the updated data
-      // (Assuming you have a function called "updateTemplate" that updates the HTML)
-      // updateTemplate(data);
-    }
-
-    {% for point in markers %}
-      addMarker({{ point.id }}, {{ point.lat }}, {{ point.lon }}, "{{ point.name }}", "{{ point.address }}", "{{ point.rating }}", "{{ point.phone }}", "{{ point.website }}");
-    {% endfor %}
-
-  </script>
-{% endblock %}
-
-
-<!-- 
-  function addMarker(id, lat, lon, name, address, rating, phone, website) {
+// Function to add a marker to the map
+function addMarker(id, lat, lon){
   // Add marker to map at click location; add popup window
   var newMarker = new L.marker([lat, lon]).addTo(map).on('click', function() {
     $.post("/", {
       marker_id: id
     });
 
-    // Update the HTML template with the marker details
-    var markerDiv = document.createElement("div");
-    markerDiv.className = "marker-details";
+    fetchMarkerPoints(id);
 
-    var nameDiv = document.createElement("div");
-    nameDiv.innerHTML = name;
-    markerDiv.appendChild(nameDiv);
-
-    var addressDiv = document.createElement("div");
-    addressDiv.innerHTML = address;
-    markerDiv.appendChild(addressDiv);
-
-    var ratingDiv = document.createElement("div");
-    ratingDiv.innerHTML = rating;
-    markerDiv.appendChild(ratingDiv);
-
-    var phoneDiv = document.createElement("div");
-    phoneDiv.innerHTML = phone;
-    markerDiv.appendChild(phoneDiv);
-
-    var websiteDiv = document.createElement("div");
-    websiteDiv.innerHTML = website;
-    markerDiv.appendChild(websiteDiv);
   });
-} -->
+}
+
+let lastLayer;
+
+// Function to fetch additional marker points
+function fetchMarkerPoints(markerId) {
+  if (lastLayer) {
+    map.removeLayer(lastLayer);
+  }
+
+  fetch(`/marker/${markerId}/points`)
+  .then(response => response.json())
+  .then(data => {
+  var myIcon = L.icon({
+    iconUrl: "{{ url_for('static', filename='marker-icon-red.png') }}",
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41] // Change the icon URL to the red marker icon
+  });
+
+  var popupOptions =
+    {
+      'maxWidth': '500',
+      'className' : 'another-popup' // classname for another popup
+    }
+
+  // Add the additional points to the Leaflet map
+  lastLayer = L.geoJSON(data, {
+    pointToLayer: function(feature, latlng) {
+      return L.marker(latlng, {icon: myIcon}); // Use the custom icon for each marker
+      
+    },
+    onEachFeature: function(feature, layer) {
+      // Bind a popup to the marker with the feature properties
+      layer.bindPopup("<b>Name:</b> " + feature.properties.name + "<br><b>Address:</b> " + feature.properties.address + "<br><b>Rating:</b> " + feature.properties.rating + "<br><b>Phone:</b> " + feature.properties.phone + "<br><b>Website:</b> " + feature.properties.website),
+      console.log(feature.properties),
+      // Add a click event listener to the marker
+      layer.on('click', function(e) {
+        updateTemplate(feature.properties); // Run the updateTemplate function with the feature properties
+      });
+
+    }
+  }).addTo(map);
+
+})
+
+.catch(error => {
+  console.error('Error fetching marker points:', error);
+  });
+}
+
+// Function to handle marker selection
+function onMarkerSelected(markerId) {
+  // Make an HTTP request to Flask to get updated data
+  fetch('/marker-selected/' + markerId)
+    .then(function(response) {
+      return response;
+    })
+    .then(function(data) {
+      console.log(data)
+      // Update the HTML template with the updated data
+      // (Assuming you have a function called "updateTemplate" that updates the HTML)
+      // updateTemplate(data);
+    });
+}
+
+// Function to update the marker details template
+function updateTemplate(data) {
+  console.log(data.address);
+  // Update the HTML template with the marker details
+  var nameDiv = document.getElementById("name");
+  nameDiv.innerHTML = data.name;
+
+  var addressDiv = document.getElementById("address");
+  addressDiv.innerHTML = data.address;
+
+  var ratingDiv = document.getElementById("rating");
+  ratingDiv.innerHTML = data.rating;
+
+  var phoneDiv = document.getElementById("phone");
+  phoneDiv.innerHTML = data.phone;
+
+  var websiteDiv = document.getElementById("website");
+  websiteDiv.innerHTML = data.website;
+}
+
+// Loop through the markers and add them to the map
+{% for point in markers %}
+  addMarker({{ point.id }}, {{ point.lat }}, {{ point.lon }}, "{{ point.name }}", "{{ point.address }}", "{{ point.rating }}", "{{ point.phone }}", "{{ point.website }}");
+{% endfor %}
+
+</script>
+{% endblock %}
