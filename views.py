@@ -18,6 +18,7 @@ def index():
        marker_id = request.form["marker_id"]
        print(marker_id)
        data = Restaurant.query.filter_by(id = Connector.query.filter_by(rental_id = marker_id))
+    print(rent)
     return render_template('index.html', markers = rent, marker_match = marker_id, marker_match_data = data)
 
 
@@ -42,6 +43,10 @@ def get_marker_points(marker_id):
                 },
                 "properties": {
                     "id": point.id,
+                    "address": point.address,
+                    "rating": point.rating,
+                    "name": point.name
+                    
                 }
             }
             for point in data

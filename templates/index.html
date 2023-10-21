@@ -22,6 +22,8 @@
 </div>
 
   <div id="map"></div>
+
+  <div class="marker-details"></div>
   <script>
     // Sets the view and map object
     const map = L.map('map').setView([47.60923991620634, -122.33245780856687], 13);
@@ -32,16 +34,17 @@
     }).addTo(map);
 
     function addMarker(id, lat, lon){
-      // Add marker to map at click location; add popup window
-      var newMarker = new L.marker([lat, lon]).addTo(map).on('click', function() {
-        $.post("/", {
-          marker_id: id
+        // Add marker to map at click location; add popup window
+        var newMarker = new L.marker([lat, lon]).addTo(map).on('click', function() {
+          $.post("/", {
+            marker_id: id
+          });
+
+          fetchMarkerPoints(id);
+
         });
+      }
 
-        fetchMarkerPoints(id);
-
-      });
-    }
     let lastLayer;
 
     function fetchMarkerPoints(markerId) {
@@ -77,7 +80,7 @@
           return response;
         })
         .then(function(data) {
-          print(data)
+          console.log(data)
           // Update the HTML template with the updated data
           // (Assuming you have a function called "updateTemplate" that updates the HTML)
           // updateTemplate(data);
@@ -85,14 +88,49 @@
     }
 
     function updateTemplate(data) {
-      // Update a <div> element with the "name" property of the data
-      var nameDiv = document.getElementById("name");
-      nameDiv.innerHTML = data.name;
+      // Update the HTML template with the updated data
+      // (Assuming you have a function called "updateTemplate" that updates the HTML)
+      // updateTemplate(data);
     }
 
     {% for point in markers %}
-      addMarker({{point.id}}, {{point.lat}}, {{point.lon}});
+      addMarker({{ point.id }}, {{ point.lat }}, {{ point.lon }}, "{{ point.name }}", "{{ point.address }}", "{{ point.rating }}", "{{ point.phone }}", "{{ point.website }}");
     {% endfor %}
 
   </script>
 {% endblock %}
+
+
+<!-- 
+  function addMarker(id, lat, lon, name, address, rating, phone, website) {
+  // Add marker to map at click location; add popup window
+  var newMarker = new L.marker([lat, lon]).addTo(map).on('click', function() {
+    $.post("/", {
+      marker_id: id
+    });
+
+    // Update the HTML template with the marker details
+    var markerDiv = document.createElement("div");
+    markerDiv.className = "marker-details";
+
+    var nameDiv = document.createElement("div");
+    nameDiv.innerHTML = name;
+    markerDiv.appendChild(nameDiv);
+
+    var addressDiv = document.createElement("div");
+    addressDiv.innerHTML = address;
+    markerDiv.appendChild(addressDiv);
+
+    var ratingDiv = document.createElement("div");
+    ratingDiv.innerHTML = rating;
+    markerDiv.appendChild(ratingDiv);
+
+    var phoneDiv = document.createElement("div");
+    phoneDiv.innerHTML = phone;
+    markerDiv.appendChild(phoneDiv);
+
+    var websiteDiv = document.createElement("div");
+    websiteDiv.innerHTML = website;
+    markerDiv.appendChild(websiteDiv);
+  });
+} -->
