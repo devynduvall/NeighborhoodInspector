@@ -36,7 +36,7 @@
 </div>
 
 <!-- Marker details container -->
-<div class="restaurant-details" id="hidden">
+<div class="restaurant-details">
   <h1 id="restaurant-name"></h1>
   <h2 id="restaurant-address"></h2>
   <p><strong>Rating:</strong> <span id="restaurant-rating"></span></p>
@@ -55,7 +55,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Load the JSON file and add markers for each feature
 fetch('/markers')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
   .then(data => {
     data.features.forEach(feature => {
       var coordinates = feature.geometry.coordinates;
@@ -72,34 +77,6 @@ fetch('/markers')
     });
   });
 
-
-
-// // Function to add a marker to the map
-// function addMarker(data) {
-//   // Add marker to map at click location; add popup window
-//   var feature = data;
-//   var coordinates = feature.geometry.coordinates;
-//   var id = feature.properties.id;
-//   var newMarker = L.marker(coordinates).addTo(map)
-//     fetchMarkerPoints(id);
-  
-// }
-
-// // Function to add a marker to the map
-// function addMarker(data) {
-//   // Add marker to map at click location; add popup window
-//   var feature = data.features[0];
-//   var coordinates = feature.geometry.coordinates;
-//   print(coordinates)
-//   var id = feature.properties.id;
-//   var newMarker = L.marker(coordinates).addTo(map).on('click', function() {
-//     $.post("/", {
-//       marker_id: id
-//     });
-//     fetchMarkerPoints(id);
-//   });
-// }
-
 let lastLayer;
 
 // Function to fetch additional marker points
@@ -110,44 +87,30 @@ function fetchMarkerPoints(markerId) {
   }
 
   fetch(`/marker/${markerId}/points`)
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
   .then(data => {
-  var myIcon = L.icon({
-    iconUrl: "{{ url_for('static', filename='marker-icon-red.png') }}",
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41] // Change the icon URL to the red marker icon
-  });
+    var myIcon = L.icon({
+      iconUrl: "{{ url_for('static', filename='marker-icon-red.png') }}",
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41] // Change the icon URL to the red marker icon
+    });
 
-  var popupOptions =
-    {
-      'maxWidth': '500',
-      'className' : 'another-popup' // classname for another popup
-    }
-
-  // Add the additional points to the Leaflet map
-  lastLayer = L.geoJSON(data, {
-    pointToLayer: function(feature, latlng) {
-      return L.marker(latlng, {icon: myIcon}); // Use the custom icon for each marker
-      
-    },
-    onEachFeature: function(feature, layer) {
-      // Bind a popup to the marker with the feature properties
-      layer.bindPopup("<b>Name:</b> " + feature.properties.name + "<br><b>Address:</b> " + feature.properties.address + "<br><b>Rating:</b> " + feature.properties.rating + "<br><b>Phone:</b> " + feature.properties.phone + "<br><b>Website:</b> " + feature.properties.website),
-      console.log(feature.properties),
-      // Add a click event listener to the marker
-      layer.on('click', function(e) {
-        restaurantDetails(feature.properties); // Run the updateTemplate function with the feature properties
-      });
-
-    }
-  }).addTo(map);
-
-})
-
-.catch(error => {
-  console.error('Error fetching marker points:', error);
+    // Add the additional points to the Leaflet map
+    lastLayer = L.geoJSON(data, {
+      pointToLayer: function(feature, latlng) {
+        return L.marker(latlng, {icon: myIcon});
+      }
+    }).addTo(map);
+  })
+  .catch(error => {
+    console.error('Error fetching marker points:', error);
   });
 }
 
