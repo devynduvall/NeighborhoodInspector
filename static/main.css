@@ -31,6 +31,15 @@ footer {
     text-align: center;
 }
 
+/* Restaurant Information */
+.restaurant-details {
+	display:none;
+}
+
+/* Rental Information */
+.rental-details {
+    display:none;
+}
 
 /* Navigation Bar */
 div nav {

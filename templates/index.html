@@ -22,13 +22,26 @@
 <!-- Map container -->
 <div id="map"></div>
 
+<!-- Rental information -->
+<div class="rental-info">
+  <h1>Seattle Rental Information</h1>
+  <p>Click on a marker to view rental information.</p>
+  <div class = "rental-data">
+    <h1 id="rental-name"></h1>
+    <h2 id="rental-address"></h2>
+    <p><strong>Rating:</strong> <span id="rental-rating"></span></p>
+    <p><strong>Phone:</strong> <span id="rental-phone"></span></p>
+    <p><strong>Website:</strong> <span id="rental-website"></span></p>
+  </div>
+</div>
+
 <!-- Marker details container -->
-<div class="marker-details">
-  <h1 id="name"></h1>
-  <h2 id="address"></h2>
-  <p><strong>Rating:</strong> <span id="rating"></span></p>
-  <p><strong>Phone:</strong> <span id="phone"></span></p>
-  <p><strong>Website:</strong> <span id="website"></span></p>
+<div class="restaurant-details" id="hidden">
+  <h1 id="restaurant-name"></h1>
+  <h2 id="restaurant-address"></h2>
+  <p><strong>Rating:</strong> <span id="restaurant-rating"></span></p>
+  <p><strong>Phone:</strong> <span id="restaurant-phone"></span></p>
+  <p><strong>Website:</strong> <span id="restaurant-website"></span></p>
 </div>
 
 <script>
@@ -40,18 +53,52 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Function to add a marker to the map
-function addMarker(id, lat, lon){
-  // Add marker to map at click location; add popup window
-  var newMarker = new L.marker([lat, lon]).addTo(map).on('click', function() {
-    $.post("/", {
-      marker_id: id
+// Load the JSON file and add markers for each feature
+fetch('/markers')
+  .then(response => response.json())
+  .then(data => {
+    data.features.forEach(feature => {
+      var coordinates = feature.geometry.coordinates;
+      console.log(coordinates);
+      var id = feature.properties.id;
+      console.log(id);
+      var newMarker = L.marker(coordinates).addTo(map).on('click', function() {
+        $.post("/", {
+          marker_id: id
+        });
+        fetchMarkerPoints(id);
+        rentalDetails(feature.properties)
+      });
     });
-
-    fetchMarkerPoints(id);
-
   });
-}
+
+
+
+// // Function to add a marker to the map
+// function addMarker(data) {
+//   // Add marker to map at click location; add popup window
+//   var feature = data;
+//   var coordinates = feature.geometry.coordinates;
+//   var id = feature.properties.id;
+//   var newMarker = L.marker(coordinates).addTo(map)
+//     fetchMarkerPoints(id);
+  
+// }
+
+// // Function to add a marker to the map
+// function addMarker(data) {
+//   // Add marker to map at click location; add popup window
+//   var feature = data.features[0];
+//   var coordinates = feature.geometry.coordinates;
+//   print(coordinates)
+//   var id = feature.properties.id;
+//   var newMarker = L.marker(coordinates).addTo(map).on('click', function() {
+//     $.post("/", {
+//       marker_id: id
+//     });
+//     fetchMarkerPoints(id);
+//   });
+// }
 
 let lastLayer;
 
@@ -59,6 +106,7 @@ let lastLayer;
 function fetchMarkerPoints(markerId) {
   if (lastLayer) {
     map.removeLayer(lastLayer);
+    resetRestaurantDetails();
   }
 
   fetch(`/marker/${markerId}/points`)
@@ -90,7 +138,7 @@ function fetchMarkerPoints(markerId) {
       console.log(feature.properties),
       // Add a click event listener to the marker
       layer.on('click', function(e) {
-        updateTemplate(feature.properties); // Run the updateTemplate function with the feature properties
+        restaurantDetails(feature.properties); // Run the updateTemplate function with the feature properties
       });
 
     }
@@ -103,45 +151,69 @@ function fetchMarkerPoints(markerId) {
   });
 }
 
-// Function to handle marker selection
-function onMarkerSelected(markerId) {
+function search() {
   // Make an HTTP request to Flask to get updated data
-  fetch('/marker-selected/' + markerId)
-    .then(function(response) {
-      return response;
-    })
-    .then(function(data) {
-      console.log(data)
-      // Update the HTML template with the updated data
-      // (Assuming you have a function called "updateTemplate" that updates the HTML)
-      // updateTemplate(data);
+  fetch(`/search`)
+  .then(response => response.json())
+  .then(data => {
+      map.setView(data.feature.geometry.coordinates, 13);
+      // function restaurantDetails(data) {
+      //   console.log(data.address);
+      //   // Update the HTML template with the marker details
+      //   var element = document.getElementsByClassName("marker-details")[0];
+      //   // Hide the element
+      //   element.style.display = "block";
+
+      //   var nameDiv = document.getElementById("name");
+      //   // Update the name div with the name of the restaurant
+      //   nameDiv.textContent = data.name;
+
+      //   var addressDiv = document.getElementById("address");
+      //   // Update the address div with the address of the restaurant
+      //   addressDiv.textContent = data.address;
+
+      //   var ratingDiv = document.getElementById("rating");
+      //   // Update the rating div with the rating of the restaurant
+      //   ratingDiv.textContent = data.rating;
+      // }
     });
 }
 
-// Function to update the marker details template
-function updateTemplate(data) {
-  console.log(data.address);
-  // Update the HTML template with the marker details
-  var nameDiv = document.getElementById("name");
-  nameDiv.innerHTML = data.name;
-
-  var addressDiv = document.getElementById("address");
-  addressDiv.innerHTML = data.address;
-
-  var ratingDiv = document.getElementById("rating");
-  ratingDiv.innerHTML = data.rating;
-
-  var phoneDiv = document.getElementById("phone");
-  phoneDiv.innerHTML = data.phone;
-
-  var websiteDiv = document.getElementById("website");
-  websiteDiv.innerHTML = data.website;
+function restaurantDetails(restaurant) {
+  // Update the marker-details div
+  var element = document.getElementsByClassName("restaurant-details")[0];
+  // Show the element
+  element.style.display = "block";
+  document.getElementById("restaurant-name").textContent = restaurant.name;
+  document.getElementById("restaurant-address").textContent = restaurant.address;
+  document.getElementById("restaurant-rating").textContent = restaurant.rating;
+  document.getElementById("restaurant-phone").textContent = restaurant.phone;
+  document.getElementById("restaurant-website").textContent = restaurant.website;
 }
 
-// Loop through the markers and add them to the map
-{% for point in markers %}
-  addMarker({{ point.id }}, {{ point.lat }}, {{ point.lon }}, "{{ point.name }}", "{{ point.address }}", "{{ point.rating }}", "{{ point.phone }}", "{{ point.website }}");
-{% endfor %}
+function resetRestaurantDetails() {
+  // Update the marker-details div
+  var element = document.getElementsByClassName("restaurant-details")[0];
+  // Hide the element
+  element.style.display = "none";
+}
+
+function rentalDetails(rental) {
+  // Update the rental-info div
+  var element = document.getElementsByClassName("rental-data")[0];
+  // Show the element
+  element.style.display = "block";
+  document.getElementById("rental-name").textContent = rental.name;
+  document.getElementById("rental-address").textContent = rental.address;
+  document.getElementById("rental-rating").textContent = rental.rating;
+  document.getElementById("rental-phone").textContent = rental.phone;
+  document.getElementById("rental-website").textContent = rental.website;
+}
+
+// // Loop through the markers and add them to the map
+// {% for point in features %}
+//   addMarker({{ feature | tojson }});
+// {% endfor %}
 
 </script>
 {% endblock %}

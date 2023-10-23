@@ -7,13 +7,35 @@ from app import app, db, Rental, Restaurant, Connector
 # Import the json module
 import json
 
+
+
 # Define a route for the index page
 @app.route('/', methods = ["GET", "POST"])
 @app.route('/index')
 def index():
     # Query all rentals and restaurants from the database
     rent = Rental.query.all()
-        
+
+    feature_collection = {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [point.lon, point.lat]
+                },
+                "properties": {
+                    "id": point.id,
+                    "address": point.address,
+                    "name": point.name
+                    
+                }
+            }
+            for point in rent
+        ]
+    }
+
     # Initialize marker_id and data variables
     marker_id = 0
     data = [] 
@@ -31,7 +53,7 @@ def index():
     print(rent)
     
     # Render the index.html template with the rentals, marker_id, and data variables
-    return render_template('index.html', markers = rent, marker_match = marker_id, marker_match_data = data)
+    return render_template('index.html', markers = feature_collection, marker_match = marker_id, marker_match_data = data)
 
 # Define a route for the marker points
 @app.route('/marker/<int:marker_id>/points')
@@ -74,13 +96,61 @@ def get_marker_points(marker_id):
 def search():
     # Get the search term from the form data
     search_term = request.form['search_term']
-    
+
     # Query the rentals that match the search term
-    data = Rental.query.filter(Rental.address.like(search_term)).all()
+    data = db.session.query(Rental).filter(Rental.address.ilike(f"%{search_term}%")).all()
     print(data)
     
+    feature_collection = {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [point.lon, point.lat]
+                },
+                "properties": {
+                    "id": point.id,
+                    "address": point.address,
+                    "name": point.name
+                    
+                }
+            }
+            for point in data
+        ]
+    }
     # Return the search term and data to the client-side JavaScript code
-    return f"Search term: {data}"
+    return jsonify(feature_collection)
+
+# Define a route to serve the markers as a feature collection
+@app.route('/markers')
+def markers():
+    # Query all rentals from the database
+    rent = Rental.query.all()
+    # Create a feature collection of the rentals
+    feature_collection = {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [point.lat, point.lon]
+                },
+                "properties": {
+                    "id": point.id,
+                    "address": point.address,
+                    "name": point.name
+                }
+            }
+            for point in rent
+        ]
+    }
+    rent_json = jsonify(feature_collection)
+
+    # Return the feature collection as JSON
+    return rent_json
 
 # Define a route for the about page
 @app.route('/about')
