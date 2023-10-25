@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+
     <!-- End of Leaflet and jQuery libraries -->
 {% endblock %}
 
 {% block map %}
 <!-- Search bar container -->
 <div class="search-container">
-  <form method="POST">
-    <input type="text" placeholder="Search for an address..." id="search-input">
+  <form action="/" method="POST">
+    <input type="text" placeholder="Search for an address..." name="search_term">
     <button type="submit">Search</button>
   </form>
 </div>
@@ -46,12 +49,14 @@
 
 <script>
 // Sets the view and map object
-const map = L.map('map').setView([47.60923991620634, -122.33245780856687], 13);
-
-// Initiallizes the map with the given layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGR1dmFsbCIsImEiOiJja2xhZGNmaHIwMThrMnZtZDZidmxreXEzIn0.7GoqPq-DxGD00WE6CfmmTw';
+var map = new mapboxgl.Map({
+  container: 'map', // container ID
+  // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+  style: 'mapbox://styles/mapbox/streets-v12', // style URL
+  center: [-122.3321, 47.6062], // starting position [lng, lat]
+  zoom: 9 // starting zoom
+});
 
 // Load the JSON file and add markers for each feature
 fetch('/markers')
@@ -62,84 +67,114 @@ fetch('/markers')
       console.log(coordinates);
       var id = feature.properties.id;
       console.log(id);
-      var newMarker = L.marker(coordinates).addTo(map).on('click', function() {
+      var newMarker = new mapboxgl.Marker({
+        color: '#FF0000',
+        interactive: true
+      }).setLngLat(coordinates)
+        .addTo(map);
+
+      newMarker.getElement().addEventListener('click', function() {
         $.post("/", {
           marker_id: id
         });
-
         fetchMarkerPoints(id);
         rentalDetails(feature.properties);
-        map.setView(coordinates, map.getZoom());
-
+        map.flyTo({
+          center: coordinates,
+          zoom: map.getZoom()
+        });
       });
     });
   });
 
-let lastLayer;
+  
+  map.on('load', function() {
+    lastLayerId = null;
+    lastSourceId = null;
+    map.loadImage(
+      'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+      function(error, image) {
+        if (error) throw error;
+        map.addImage('marker-15', image);
+      }
+    );
+  });
 
-// Function to fetch additional marker points
-function fetchMarkerPoints(markerId) {
-  if (lastLayer) {
-    map.removeLayer(lastLayer);
-    resetRestaurantDetails();
+  function fetchMarkerPoints(markerId) {
+    fetch(`/marker/${markerId}/points`)
+      .then(response => response.json())
+      .then(data => {
+        var features = data.features;
+        var sourceData = {
+          type: 'FeatureCollection',
+          features: features
+        };
+        var newSourceId = `source-${markerId}`;
+        var newLayerId = `layer-${markerId}`;
+        var layer = {
+          id: newLayerId,
+          type: 'symbol',
+          source: newSourceId,
+          layout: {
+            'icon-image': 'marker-15',
+            'icon-allow-overlap': true,
+            'icon-ignore-placement': true
+          },
+          paint: {
+            'icon-color': '#FF0000'
+          }
+        };
+
+        if (lastLayerId !== newLayerId) {
+          if (lastLayerId) {
+            map.removeLayer(lastLayerId);
+            map.removeSource(lastSourceId);
+            resetRestaurantDetails();
+          }
+          map.addSource(newSourceId, { type: 'geojson', data: sourceData });
+          map.addLayer(layer);
+          lastLayerId = newLayerId;
+          lastSourceId = newSourceId;
+        }
+        rentalDetails(features[0].properties);
+
+
+        map.on('click', newLayerId, function(e) {
+          var clickedFeatures = map.queryRenderedFeatures(e.point, { layers: [newLayerId] });
+          var selected = clickedFeatures.map(feature => feature.properties)
+          console.log(selected)
+          restaurantDetails(selected);
+        });
+
+        map.flyTo({
+          center: features[0].geometry.coordinates,
+          zoom: map.getZoom()
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching marker points:', error);
+      });
   }
+  
+// // Define the search form and search input elements
+// var searchForm = document.getElementById('search-form');
+// var searchInput = document.getElementById('search-input');
 
-  fetch(`/marker/${markerId}/points`)
-  .then(response => response.json())
-  .then(data => {
-  var myIcon = L.icon({
-    iconUrl: "{{ url_for('static', filename='marker-icon-red.png') }}",
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41] // Change the icon URL to the red marker icon
-  });
+// // Add an event listener to the search form to handle form submissions
+// searchForm.addEventListener('submit', function(event) {
+//   event.preventDefault(); // Prevent the default form submission behavior
 
-  // Add the additional points to the Leaflet map
-  lastLayer = L.geoJSON(data, {
-    pointToLayer: function(feature, latlng) {
-      return L.marker(latlng, {icon: myIcon}); // Use the custom icon for each marker
-      
-    },
-    onEachFeature: function(feature, layer) {
-      // Bind a popup to the marker with the feature properties
-      layer.bindPopup("<b>Name:</b> " + feature.properties.name + "<br><b>Address:</b> " + feature.properties.address + "<br><b>Rating:</b> " + feature.properties.rating + "<br><b>Phone:</b> " + feature.properties.phone + "<br><b>Website:</b> " + feature.properties.website),
-      console.log(feature.properties),
-      // Add a click event listener to the marker
-      layer.on('click', function(e) {
-        restaurantDetails(feature.properties); // Run the updateTemplate function with the feature properties
-        
-      });
+//   // Get the search term from the search input field
+//   var search_term = rentals_search;
 
-    }
-  }).addTo(map);
-
-})
-
-.catch(error => {
-  console.error('Error fetching marker points:', error);
-  });
-}
-
-// Define the search form and search input elements
-var searchForm = document.getElementById('search-form');
-var searchInput = document.getElementById('search-input');
-
-// Add an event listener to the search form to handle form submissions
-searchForm.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission behavior
-
-  // Get the search term from the search input field
-  var search_term = searchInput.value;
-
-  // Send an AJAX request to the Flask app to search for matching rentals
-  fetch(`/search/${search_term}`)
-    .then(response => response.json())
-    .then(data => {
-      var coordinates = data.features[0].geometry.coordinates;
-      map.setView(coordinates, map.getZoom());
-    });
-});
+//   // Send an AJAX request to the Flask app to search for matching rentals
+//   fetch(`/search/${search_term}`)
+//     .then(response => response.json())
+//     .then(data => {
+//       var coordinates = data.features[0].geometry.coordinates;
+//       map.setView(coordinates, map.getZoom());
+//     });
+// });
 
 // function search() {
 //   // Get the search term from the search input field
@@ -172,11 +207,21 @@ searchForm.addEventListener('submit', function(event) {
 //   xhr.send();
 // }
 
-fetch(`/search/${searchTerm}`)
-  .then(response => response.json())
-  .then(data => {
-      console.log(data.feature.geometry.coordinates);
-      map.setView(data.feature.geometry.coordinates, map.getZoom());
+// searchForm.addEventListener('submit', function(event) {
+//   event.preventDefault(); // Prevent the form from submitting normally
+//   search(); // Call the search() function to perform the search
+// });
+
+
+// function search() {
+//   fetch(`/search`)
+//   .then(response => response.json())
+//   .then(data => {
+//       console.log(data.feature.geometry.coordinates);
+//       map.setView(data.feature.geometry.coordinates, map.getZoom());
+//     });
+// }
+
       // var newMarker = L.marker(coordinates).addTo(map).on('click', function() {
       //   $.post("/", {
       //     marker_id: id
@@ -200,9 +245,10 @@ fetch(`/search/${searchTerm}`)
       //   // Update the rating div with the rating of the restaurant
       //   ratingDiv.textContent = data.rating;
       // }
-    });
 
 function restaurantDetails(restaurant) {
+  console.log(restaurant);
+  restaurant = restaurant[0];
   // Update the marker-details div
   var element = document.getElementsByClassName("restaurant-details")[0];
   // Show the element

@@ -1,9 +1,9 @@
 # Import Flask, render_template, request, and jsonify modules
 from flask import Flask, render_template, request, jsonify
 
+
 # Import the app, db, Rental, Restaurant, and Connector modules from the app package
 from app import app, db, Rental, Restaurant, Connector
-
 # Import the json module
 import json
 
@@ -49,11 +49,14 @@ def index():
         # Query the restaurants that match the rental_id
         data = Restaurant.query.filter_by(id = Connector.query.filter_by(rental_id = marker_id))
     
+    # Print the rentals to the console
+    print(rent)
+    
     # Render the index.html template with the rentals, marker_id, and data variables
     return render_template('index.html', markers = feature_collection, marker_match = marker_id, marker_match_data = data)
 
 # Define a route for the marker points
-@app.route('/marker/<int:marker_id>/points')
+@app.route('/marker/<int:marker_id>/points', methods=['GET', 'POST'])
 def get_marker_points(marker_id):
     # Use SQLAlchemy to query the database for additional points based on marker_id
     subquery = (
@@ -123,34 +126,35 @@ def get_marker_points(marker_id):
 #     # Return the coordinates to the front-end
 #     return jsonify(feature_collection)
 
-@app.route('/search/<string:search_term>', methods=['GET', 'POST'])
-def search(search_term):
+# @app.route('/search', methods=['GET', 'POST'])
+# def search():
+#     search_term = request.form['search_term']
 
-        # Query the database for the rentals that match the search term
-    data = db.session.query(Rental).filter(Rental.address.ilike(f"%{search_term}%")).all()
+#     # Query the database for the rentals that match the search term
+#     data = db.session.query(Rental).filter(Rental.address.ilike(f"%{search_term}%")).all()
 
-    # Create a GeoJSON feature collection for the matching rentals
-    feature_collection = {
-        "type": "FeatureCollection",
-        "features": [
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [point.lon, point.lat]
-                },
-                "properties": {
-                    "id": point.id,
-                    "address": point.address,
-                    "name": point.name
-                }
-            }
-            for point in data
-        ]
-    }
+#     # Create a GeoJSON feature collection for the matching rentals
+#     feature_collection = {
+#         "type": "FeatureCollection",
+#         "features": [
+#             {
+#                 "type": "Feature",
+#                 "geometry": {
+#                     "type": "Point",
+#                     "coordinates": [point.lon, point.lat]
+#                 },
+#                 "properties": {
+#                     "id": point.id,
+#                     "address": point.address,
+#                     "name": point.name
+#                 }
+#             }
+#             for point in data
+#         ]
+#     }
 
-    # Return the GeoJSON feature collection to the front-end
-    return jsonify(feature_collection)
+#     # Return the GeoJSON feature collection to the front-end
+#     return jsonify(feature_collection)
 
 # Define a route to serve the markers as a feature collection
 @app.route('/markers')
@@ -165,7 +169,7 @@ def markers():
                 "type": "Feature",
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [point.lat, point.lon]
+                    "coordinates": [point.lon, point.lat]
                 },
                 "properties": {
                     "id": point.id,
@@ -185,3 +189,8 @@ def markers():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+
+@app.route('/Users')
+def Users():
+    return render_template('Users.html')
