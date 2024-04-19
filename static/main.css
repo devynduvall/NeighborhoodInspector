@@ -4,10 +4,17 @@ body, h1, h2 {
     padding: 0;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    height: 7.5vh;
     text-align: center;
 }
 
@@ -20,8 +27,7 @@ main {
 }
 
 #map {
-    height: 600px;
-    width: 100%;
+    flex-grow: 1;
 }
 
 footer {
@@ -31,21 +37,48 @@ footer {
     text-align: center;
 }
 
+.map-filters {
+    height: 7.5vh; 
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map-container {
+    display: flex;
+    height: 85.5vh;
+    width: 100%;
+    position: relative;
+}
+
 /* Restaurant Information */
 .restaurant-details {
 	display:none;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50%;
+    /* Add other styles as needed */
 }
 
 /* Rental Information */
-.rental-data {
-    position: absolute; 
-    top: 75px;
-    right: 50px;
-    width: 300px;
-    height: 30%;
-    background-color: white;
-    z-index: 999;
-    display: none;
+.rental-info {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 10px;
+    box-sizing: border-box;
+    display:none;
+
   }
 
 /* Navigation Bar */
@@ -71,4 +104,18 @@ div nav a.active {
 }
 
 
-/* Popups */
+/* Filter Button */
+#myModal {
+    position: absolute;
+    top: 15vh;  /* Adjust as needed */
+    width: 33%;
+    height: 33vh;
+    display: none;  /* Initially hidden */
+    overflow: auto;  /* Enable scroll if content overflows */
+}
+
+.modal-content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}

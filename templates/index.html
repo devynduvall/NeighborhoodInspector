@@ -14,83 +14,278 @@
 {% endblock %}
 
 {% block map %}
-<!-- Search bar container -->
-<div class="search-container">
-  <form action="/" method="POST">
-    <input type="text" placeholder="Search for an address..." name="search_term">
-    <button type="submit">Search</button>
-  </form>
+
+<div class="map-filters">
+  <!-- Search bar container -->
+  <div class="search-container">
+    <form id="search-form">
+      <input type="text" placeholder="Search for an address..." name="search_term">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+
+
+  <!-- Filter button -->
+  <button id="filter-button" class="btn btn-secondary">Filter</button>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form method="POST">
+        {{ filtering_form.hidden_tag() }}
+      
+        {{ filtering_form.restaurant_cuisine.label(class="form-select") }}
+      
+        {{ filtering_form.restaurant_cuisine(class="form-select") }}
+      
+        {{ filtering_form.submit(class="btn btn-secondary") }}
+        <br/>
+      </form>
+    </div>
+  </div>
 </div>
 
-<!-- Map container -->
-<div id="map"></div>
 
-<!-- Rental information -->
-<div class="rental-info">
-  <h1>Seattle Rental Information</h1>
-  <p>Click on a marker to view rental information.</p>
-  <div class = "rental-data">
+<div class ="map-container">
+
+  <!-- Map container -->
+  <div id="map"></div>
+
+  <!-- Rental information -->
+  <div class="rental-info">
+    <h1>Seattle Rental Information</h1>
+    <p>Click on a marker to view rental information.</p>
     <h1 id="rental-name"></h1>
     <h2 id="rental-address"></h2>
     <p><strong>Rating:</strong> <span id="rental-rating"></span></p>
     <p><strong>Phone:</strong> <span id="rental-phone"></span></p>
     <p><strong>Website:</strong> <span id="rental-website"></span></p>
   </div>
-</div>
 
-<!-- Marker details container -->
-<div class="restaurant-details">
-  <h1 id="restaurant-name"></h1>
-  <h2 id="restaurant-address"></h2>
-  <p><strong>Rating:</strong> <span id="restaurant-rating"></span></p>
-  <p><strong>Phone:</strong> <span id="restaurant-phone"></span></p>
-  <p><strong>Website:</strong> <span id="restaurant-website"></span></p>
-</div>
+  <!-- Marker details container -->
+  <div class="restaurant-details">
+    <h1 id="restaurant-name"></h1>
+    <h2 id="restaurant-address"></h2>
+    <p><strong>Cuisine:</strong> <span id="restaurant-cuisine"></span></p>
+    <p><strong>Phone:</strong> <span id="restaurant-phone"></span></p>
+    <p><strong>Website:</strong> <span id="restaurant-website"></span></p>
+    <button id="closeButton">Close</button>
+  </div>
 
+</div>
 <script>
 // Sets the view and map object
 mapboxgl.accessToken = 'pk.eyJ1IjoiZGR1dmFsbCIsImEiOiJja2xhZGNmaHIwMThrMnZtZDZidmxreXEzIn0.7GoqPq-DxGD00WE6CfmmTw';
 var map = new mapboxgl.Map({
   container: 'map', // container ID
   // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-  style: 'mapbox://styles/mapbox/streets-v12', // style URL
+  style: 'mapbox://styles/mapbox/light-v11', // style URL
   center: [-122.3321, 47.6062], // starting position [lng, lat]
-  zoom: 9 // starting zoom
+  zoom: 10 // starting zoom
 });
 
-// Load the JSON file and add markers for each feature
-fetch('/markers')
-  .then(response => response.json())
-  .then(data => {
-    data.features.forEach(feature => {
-      var coordinates = feature.geometry.coordinates;
-      console.log(coordinates);
-      var id = feature.properties.id;
-      console.log(id);
-      var newMarker = new mapboxgl.Marker({
-        color: '#FF0000',
-        interactive: true
-      }).setLngLat(coordinates)
-        .addTo(map);
+var modal = document.getElementById("myModal");
 
-      newMarker.getElement().addEventListener('click', function() {
-        $.post("/", {
-          marker_id: id
-        });
-        fetchMarkerPoints(id);
-        rentalDetails(feature.properties);
-        map.flyTo({
-          center: coordinates,
-          zoom: map.getZoom()
-        });
-      });
+// Get the button that opens the modal
+var btn = document.getElementById("filter-button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+function showRentals(marker) {
+    map.addSource('markers', {
+      type: 'geojson',
+      data: marker,
+      cluster: true,
+      clusterMaxZoom: 12, // Max zoom to cluster points on
+      clusterRadius: 75 // Radius of each cluster when clustering points (defaults to 50)
     });
-  });
+
+    map.addLayer({
+      id: 'clusters',
+      type: 'circle',
+      source: 'markers',
+      filter: ['has', 'point_count'],
+      paint: {
+        // Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
+        // with three steps to implement three types of circles:
+        //   * Blue, 20px circles when point count is less than 100
+        //   * Yellow, 30px circles when point count is between 100 and 750
+        //   * Pink, 40px circles when point count is greater than or equal to 750
+        'circle-color': [
+          'step',
+          ['get', 'point_count'],
+          '#51bbd6',
+          100,
+          '#f1f075',
+          750,
+          '#f28cb1'
+        ],
+        'circle-radius': [
+          'step',
+          ['get', 'point_count'],
+          20,
+          100,
+          30,
+          750,
+          40
+        ]
+      }
+    });
+
+    map.addLayer({
+      id: 'cluster-count',
+      type: 'symbol',
+      source: 'markers',
+      filter: ['has', 'point_count'],
+      layout: {
+        'text-field': '{point_count_abbreviated}',
+        'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+        'text-size': 12
+      }
+    });
+
+    map.addLayer({
+      id: 'unclustered-point',
+      type: 'circle',
+      source: 'markers',
+      filter: ['!', ['has', 'point_count']],
+      paint: {
+        'circle-color': '#11b4da',
+        'circle-radius': 10,
+        'circle-stroke-width': 1,
+        'circle-stroke-color': '#fff'
+      }
+    });
+
+    // inspect a cluster on click
+    map.on('click', 'clusters', function (e) {
+      var features = map.queryRenderedFeatures(e.point, {
+        layers: ['clusters']
+      });
+      var clusterId = features[0].properties.cluster_id;
+      map.getSource('markers').getClusterExpansionZoom(
+        clusterId,
+        function (err, zoom) {
+          if (err) return;
+
+          map.easeTo({
+            center: features[0].geometry.coordinates,
+            zoom: 14
+          });
+        }
+      );
+
+      // Check if the layer exists before trying to remove it
+      if (map.getLayer(lastLayerId)) {
+        map.removeLayer(lastLayerId);
+        lastLayerId = null;
+      }
+
+      // Check if the source exists before trying to remove it
+      if (map.getSource(lastSourceId)) {
+        map.removeSource(lastSourceId);
+        lastSourceId = null;
+      }
+
+    });
+
+    // When a click event occurs on a feature in the unclustered-point layer, open a popup at the location of the feature, with description HTML from its properties.
+    map.on('click', 'unclustered-point', function (e) {
+      var coordinates = e.features[0].geometry.coordinates.slice();
+      var description = e.features[0].properties.description;
+      var id = e.features[0].properties.id; // Ensure the id is available in the properties
+
+      // Ensure that if the map is zoomed out such that multiple copies of the feature are visible, the popup appears over the copy being pointed to.
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+      }
+
+      map.flyTo({
+        center: coordinates,
+        zoom: 14
+      });
+
+      fetchMarkerPoints(id); // Fetch marker points with the id
+      rentalDetails(e.features[0].properties); // Run rentalDetails with the properties
+    });
+
+    map.on('click', function(e) {
+      var features = map.queryRenderedFeatures(e.point, { layers: ['unclustered-point'] });
+      
+      if (!features.length) {
+        var element = document.getElementsByClassName("restaurant-details")[0];
+        // Hide the element
+        element.style.display = "none";
+      }
+    });
+
+    map.on('mouseenter', 'clusters', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+    map.on('mouseleave', 'clusters', function () {
+      map.getCanvas().style.cursor = '';
+    });
+  };
+
+// // Load the JSON file and add markers for each feature
+// fetch('/markers')
+//   .then(response => response.json())
+//   .then(data => {
+//     data.features.forEach(feature => {
+//       var coordinates = feature.geometry.coordinates;
+//       var address = feature.properties.address;
+//       console.log(address);
+//       var id = feature.properties.id;
+//       console.log(id);
+//       console.log(coordinates)
+//       var newMarker = new mapboxgl.Marker({
+//         color: '#00FF00',
+//         interactive: true
+//       }).setLngLat(coordinates)
+//         .addTo(map);
+
+//       newMarker.getElement().addEventListener('click', function() {
+        
+//         map.flyTo({
+//             center: coordinates,
+//             zoom: 14
+//         });
+
+//         fetchMarkerPoints(id);
+//         console.log(feature.properties)
+//         console.log(feature.geometry.coordinates)
+//         rentalDetails(feature.properties);
+        
+//       });
+//     });
+//   });
 
   
   map.on('load', function() {
     lastLayerId = null;
     lastSourceId = null;
+    var markers = {{ markers | tojson }};
+    showRentals(markers);
     map.loadImage(
       'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
       function(error, image) {
@@ -98,9 +293,14 @@ fetch('/markers')
         map.addImage('marker-15', image);
       }
     );
+    
   });
 
+
+  
+
   function fetchMarkerPoints(markerId) {
+    
     fetch(`/marker/${markerId}/points`)
       .then(response => response.json())
       .then(data => {
@@ -122,7 +322,8 @@ fetch('/markers')
           },
           paint: {
             'icon-color': '#FF0000'
-          }
+          },
+          maxzoom: 10 // Set the maximum zoom level at which the layer is visible
         };
 
         if (lastLayerId !== newLayerId) {
@@ -133,11 +334,10 @@ fetch('/markers')
           }
           map.addSource(newSourceId, { type: 'geojson', data: sourceData });
           map.addLayer(layer);
+          map.setLayerZoomRange(newLayerId, 13, 25);
           lastLayerId = newLayerId;
           lastSourceId = newSourceId;
         }
-        rentalDetails(features[0].properties);
-
 
         map.on('click', newLayerId, function(e) {
           var clickedFeatures = map.queryRenderedFeatures(e.point, { layers: [newLayerId] });
@@ -146,35 +346,36 @@ fetch('/markers')
           restaurantDetails(selected);
         });
 
-        map.flyTo({
-          center: features[0].geometry.coordinates,
-          zoom: map.getZoom()
-        });
+        
       })
       .catch(error => {
         console.error('Error fetching marker points:', error);
       });
   }
   
-// // Define the search form and search input elements
-// var searchForm = document.getElementById('search-form');
-// var searchInput = document.getElementById('search-input');
+var searchForm = document.getElementById('search-form');
+  searchForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var searchTerm = searchForm.elements['search_term'].value;
+    searchCoordinates(searchTerm);
+  });
 
-// // Add an event listener to the search form to handle form submissions
-// searchForm.addEventListener('submit', function(event) {
-//   event.preventDefault(); // Prevent the default form submission behavior
-
-//   // Get the search term from the search input field
-//   var search_term = rentals_search;
-
-//   // Send an AJAX request to the Flask app to search for matching rentals
-//   fetch(`/search/${search_term}`)
-//     .then(response => response.json())
-//     .then(data => {
-//       var coordinates = data.features[0].geometry.coordinates;
-//       map.setView(coordinates, map.getZoom());
-//     });
-// });
+  function searchCoordinates(searchTerm) {
+    fetch('/search/' + searchTerm + '/coordinates')
+      .then(response => response.json())
+      .then(data => {
+        var newCenter = data.features[0].geometry.coordinates;
+        console.log(data.features)
+        var id = data.features[0].properties.id;
+        console.log(newCenter)
+        map.flyTo({
+          center: newCenter,
+          zoom: 14
+        })
+        fetchMarkerPoints(id)
+        rentalDetails(data.features[0].properties)
+      });
+  }
 
 // function search() {
 //   // Get the search term from the search input field
@@ -247,7 +448,6 @@ fetch('/markers')
       // }
 
 function restaurantDetails(restaurant) {
-  console.log(restaurant);
   restaurant = restaurant[0];
   // Update the marker-details div
   var element = document.getElementsByClassName("restaurant-details")[0];
@@ -255,7 +455,7 @@ function restaurantDetails(restaurant) {
   element.style.display = "block";
   document.getElementById("restaurant-name").textContent = restaurant.name;
   document.getElementById("restaurant-address").textContent = restaurant.address;
-  document.getElementById("restaurant-rating").textContent = restaurant.rating;
+  document.getElementById("restaurant-cuisine").textContent = restaurant.cuisine;
   document.getElementById("restaurant-phone").textContent = restaurant.phone;
   document.getElementById("restaurant-website").textContent = restaurant.website;
 }
@@ -269,14 +469,11 @@ function resetRestaurantDetails() {
 
 function rentalDetails(rental) {
   // Update the rental-info div
-  var element = document.getElementsByClassName("rental-data")[0];
+  var element = document.getElementsByClassName("rental-info")[0];
   // Show the element
   element.style.display = "block";
   document.getElementById("rental-name").textContent = rental.name;
   document.getElementById("rental-address").textContent = rental.address;
-  document.getElementById("rental-rating").textContent = rental.rating;
-  document.getElementById("rental-phone").textContent = rental.phone;
-  document.getElementById("rental-website").textContent = rental.website;
 }
 
 // // Loop through the markers and add them to the map

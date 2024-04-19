@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Login</h1>
+
+	<h1>What's Your Name?</h1>
+	<br/>
+	<form method="POST">
+		{{ form.hidden_tag() }}
+
+        {{ form.username.label(class="form-label") }}
+
+		{{ form.username(class="form-control") }}
+		<br/>
+
+        {{ form.password_hash.label(class="form-label") }}
+
+		{{ form.password_hash(class="form-control") }}
+		<br/>
+
+		{{ form.submit(class="btn btn-secondary") }}
+
+
+	</form>
+
+
+
+
+
+{% endblock %}

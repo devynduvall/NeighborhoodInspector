@@ -1,0 +1,88 @@
+import pandas as pd
+import numpy as np
+import requests
+import json
+import time
+import math
+import os
+import boto3
+from datetime import datetime, timezone
+
+s3_client = boto3.client("s3",
+    aws_access_key_id = os.getenv('ACCESS_KEY'),
+    aws_secret_access_key = os.getenv('SECRET'))
+
+LOCAL_FILE_SYS = "/tmp/"
+S3_BUCKET = "testbucketdevynduvall"  # please replace with your bucket name
+CHUNK_SIZE = 200  # determined based on API, memory constraints, experimentation
+
+google_key = os.getenv('GOOGLE_MAPS_API_KEY')
+
+def get_file_name(export_type):
+    dt_now = datetime.now(tz=timezone.utc)
+    file_name = (
+        export_type
+        + "."
+        + dt_now.strftime("%Y-%m-%d")
+
+        + ".csv"
+    )
+    return file_name
+
+# Gets the file from s3
+def get_all_rental_data(key):
+    os.chdir(LOCAL_FILE_SYS)
+    s3_client.download_file(S3_BUCKET, str("Rental/" + key), str(LOCAL_FILE_SYS + key))
+    df_rental = pd.read_csv(LOCAL_FILE_SYS + key)
+    return df_rental
+
+# Queries the Google Place API based upon the rental data to search for all restaurants 
+# around the rental properties returns the data frame
+def restaurant_around_rental(rental):
+    
+    df_all = pd.DataFrame()
+                                                 
+    for index, row in rental.iterrows():
+        location = str(row['lat']) + "," + str(row['lon'])
+        radius = 400
+        type = 'restaurant'
+    
+        url = f"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={location}&radius={radius}&type={type}&key={google_key}"
+    
+        # make the request
+        response = requests.get(url)
+
+        # extract the results
+        json_results = response.json()
+        
+        df_results = pd.json_normalize(data=json_results['results'])
+        
+        df_results['property_id'] = row['property_id']
+    
+        df_all = pd.concat([df_all, df_results], ignore_index=True)
+    
+    return df_all
+
+
+def upload_to_aws(df, key):
+    
+    os.chdir(LOCAL_FILE_SYS)
+    
+    df.to_csv(str(LOCAL_FILE_SYS + key))
+    
+    s3_client.upload_file(str(LOCAL_FILE_SYS + key), S3_BUCKET, str("Rental_Restaurant/" + key))
+
+
+def start(event, context):
+    key_rental = get_file_name("Rental")
+    key_rest = get_file_name("Rental_Restaurant")
+    
+    df_rent = get_all_rental_data(key_rental)
+
+    df_restaurant = restaurant_around_rental(df_rent)
+    
+    # write_restaurant_data(df_rent, key_rest)
+    
+    upload_to_aws(df_restaurant, key_rest)
+    
+    return {"status":200}
