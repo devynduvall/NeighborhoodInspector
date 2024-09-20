@@ -2,12 +2,17 @@
 from flask import Flask, render_template, request, jsonify
 
 # Import the app, db, Rental, Restaurant, and Connector modules from the app package
-from app import app, db, Rental, Restaurant, Connector
+from app import app, db
+from Data_Manip.create_db import drop_create_db
+from Data_Manip.update_db import insert_data
+
+from models import Rental, Restaurant, Connector
+
+with app.app_context():
+    db.create_all()
 
 # Import the json module
 import json
-
-
 
 # Define a route for the index page
 @app.route('/', methods = ["GET", "POST"])
@@ -185,3 +190,8 @@ def markers():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/reset_database')
+def reset_database():
+    insert_data()
+    return "Database reset"

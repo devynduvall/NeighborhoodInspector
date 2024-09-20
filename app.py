@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for, flash, session
 from flask_sqlalchemy import SQLAlchemy
+
 from flask_migrate import Migrate
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash 
@@ -15,19 +16,17 @@ from flask_wtf.file import FileField
 from webforms import LoginForm, UserForm, FilteringForm
 
 
+from Data_Manip.update_db import insert_data
+
+
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:#1234abcd@localhost/rentalrestaurant'
 app.config['SECRET_KEY'] = "mysecretkey that you aren't able to understand"
-
-
-
-
-db = SQLAlchemy(app)  # Initialize the database
-
-migrate = Migrate(app, db)
-
-from models import Rental, Restaurant, Connector, Users, Shop, Shop_Connector
 
 # Flask_Login Stuff
 login_manager = LoginManager()
@@ -38,12 +37,9 @@ login_manager.login_view = 'login'
 def load_user(user_id):
 	return Users.query.get(int(user_id))
 
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost:5433/mydatabase'
 
-with app.app_context():
-    db.create_all()
-
-
-
+db = SQLAlchemy(app)  # Initialize the database
 
 # Create Login Page
 @app.route('/login', methods=['GET', 'POST'])
