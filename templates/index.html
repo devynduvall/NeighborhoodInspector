@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin=""/>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
-
     <!-- End of Leaflet and jQuery libraries -->
 {% endblock %}
 
@@ -408,21 +405,11 @@ var searchForm = document.getElementById('search-form');
 //   xhr.send();
 // }
 
-// searchForm.addEventListener('submit', function(event) {
-//   event.preventDefault(); // Prevent the form from submitting normally
-//   search(); // Call the search() function to perform the search
-// });
-
-
-// function search() {
-//   fetch(`/search`)
-//   .then(response => response.json())
-//   .then(data => {
-//       console.log(data.feature.geometry.coordinates);
-//       map.setView(data.feature.geometry.coordinates, map.getZoom());
-//     });
-// }
-
+fetch(`/search/${searchTerm}`)
+  .then(response => response.json())
+  .then(data => {
+      console.log(data.feature.geometry.coordinates);
+      map.setView(data.feature.geometry.coordinates, map.getZoom());
       // var newMarker = L.marker(coordinates).addTo(map).on('click', function() {
       //   $.post("/", {
       //     marker_id: id
@@ -446,6 +433,7 @@ var searchForm = document.getElementById('search-form');
       //   // Update the rating div with the rating of the restaurant
       //   ratingDiv.textContent = data.rating;
       // }
+    });
 
 function restaurantDetails(restaurant) {
   restaurant = restaurant[0];
