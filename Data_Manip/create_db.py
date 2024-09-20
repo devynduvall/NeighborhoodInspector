@@ -1,19 +1,23 @@
-import mysql.connector 
+import psycopg2
+import os
 
-mydb = mysql.connector.connect(
-    host = "localhost",
-    user = "root",
-    passwd = "#1234abcd",
-)
+def drop_create_db():
+    # Connect to MySQL server
+    mydb = psycopg2.connect(
+        host= 'localhost',
+        user='postgres',
+        password='5#Wheeler5',
+    )
 
-# Create a Cursor
-mycursor = mydb.cursor()
+    # Create a cursor object
+    mycursor = mydb.cursor()
 
-mycursor.execute("DROP DATABASE rentalrestaurant")
+    # Drop the database if it exists
+    mycursor.execute("DROP DATABASE IF EXISTS rentalrestaurant")
 
-# Create a Database
-mycursor.execute("CREATE DATABASE rentalrestaurant")
+    # Create a new database
+    mycursor.execute("CREATE DATABASE rentalrestaurant")
 
-# Close the Connection
-mydb.close()
-
+    # Close the cursor and connection
+    mycursor.close()
+    mydb.close()
