@@ -1,0 +1,501 @@
+ID,Address,AddressLine1,City,State,ZipCode,PropertyType,Bathrooms,Bedrooms,Price,SquareFeet,Latitude,Longitude
+"100-6th-Ave-S,-Seattle,-WA-98104","100 6th Ave S, Seattle, WA 98104",100 6th Ave S,Seattle,WA,98104,Apartment,1,0,1095,,47.60145,-122.32608
+"100-Denny-Way,-Seattle,-WA-98109","100 Denny Way, Seattle, WA 98109",100 Denny Way,Seattle,WA,98109,Apartment,1,1,1950,589,47.619021,-122.355075
+"100-E-Boston-St,-Seattle,-WA-98102","100 E Boston St, Seattle, WA 98102",100 E Boston St,Seattle,WA,98102,Apartment,1,1,1625,,47.638412,-122.326767
+"100-Taylor-Ave-N,-Seattle,-WA-98109","100 Taylor Ave N, Seattle, WA 98109",100 Taylor Ave N,Seattle,WA,98109,Apartment,1,,2035,,47.619476,-122.3454
+"1000-8th-Ave,-Seattle,-WA-98104","1000 8th Ave, Seattle, WA 98104",1000 8th Ave,Seattle,WA,98104,Apartment,1,,1766,,47.608533,-122.328242
+"1000-Minor-Ave,-Seattle,-WA-98104","1000 Minor Ave, Seattle, WA 98104",1000 Minor Ave,Seattle,WA,98104,Apartment,1,2,1790,638,47.61022,-122.323973
+"1001-Taylor-Ave-N,-Seattle,-WA-98109","1001 Taylor Ave N, Seattle, WA 98109",1001 Taylor Ave N,Seattle,WA,98109,Apartment,2,2,2800,,47.628297,-122.34654
+"10014-5th-Ave-NE,-Seattle,-WA-98125","10014 5th Ave NE, Seattle, WA 98125",10014 5th Ave NE,Seattle,WA,98125,Apartment,1,2,2045,,47.701975,-122.322704
+"1005-E-Roy-St,-Seattle,-WA-98102","1005 E Roy St, Seattle, WA 98102",1005 E Roy St,Seattle,WA,98102,Apartment,1,1,2595,,47.625176,-122.319388
+"1006-15th-Ave-E,-Seattle,-WA-98112","1006 15th Ave E, Seattle, WA 98112",1006 15th Ave E,Seattle,WA,98112,Apartment,1,1,1625,,47.627865,-122.312202
+"101-6th-Ave-S,-Seattle,-WA-98104","101 6th Ave S, Seattle, WA 98104",101 6th Ave S,Seattle,WA,98104,Apartment,1,2,1750,876,47.601379,-122.326637
+"101-Nw-85th-St,-Seattle,-WA-98117","101 Nw 85th St, Seattle, WA 98117",101 Nw 85th St,Seattle,WA,98117,Apartment,1,0,1342,,47.690395,-122.358422
+"10102-8th-Ave-S,-Seattle,-WA-98168","10102 8th Ave S, Seattle, WA 98168",10102 8th Ave S,Seattle,WA,98168,Apartment,,,1835,,47.512943,-122.322169
+"1019-E-Pike-St,-Seattle,-WA-98122","1019 E Pike St, Seattle, WA 98122",1019 E Pike St,Seattle,WA,98122,Apartment,1,1,1397,390,47.613874,-122.318412
+"1020-Ne-63rd-St,-Seattle,-WA-98115","1020 Ne 63rd St, Seattle, WA 98115",1020 Ne 63rd St,Seattle,WA,98115,Apartment,1,1,1883,,47.674393,-122.31644
+"10215-Greenwood-Ave-N,-Seattle,-WA-98133","10215 Greenwood Ave N, Seattle, WA 98133",10215 Greenwood Ave N,Seattle,WA,98133,Apartment,1,,1665,,47.70339,-122.35578
+"10300-Des-Moines-Memorial-Dr-S,-Seattle,-WA-98168","10300 Des Moines Memorial Dr S, Seattle, WA 98168",10300 Des Moines Memorial Dr S,Seattle,WA,98168,Apartment,1,2,1595,,47.511238,-122.306514
+"10306-Meridian-Ave-N,-Seattle,-WA-98133","10306 Meridian Ave N, Seattle, WA 98133",10306 Meridian Ave N,Seattle,WA,98133,Apartment,,,1639,,47.703461,-122.333156
+"10336-Interlake-Ave-N,-Seattle,-WA-98133","10336 Interlake Ave N, Seattle, WA 98133",10336 Interlake Ave N,Seattle,WA,98133,Single Family,1,2,1700,1100,47.70436,-122.340264
+"10424-2nd-Ave-S,-Seattle,-WA-98168","10424 2nd Ave S, Seattle, WA 98168",10424 2nd Ave S,Seattle,WA,98168,Single Family,2,4,2695,1580,47.50959,-122.330737
+"105-Warren-Ave-N,-Seattle,-WA-98109","105 Warren Ave N, Seattle, WA 98109",105 Warren Ave N,Seattle,WA,98109,Apartment,1,1,1819,464,47.61879,-122.35451
+"1050-James-St,-Seattle,-WA-98104","1050 James St, Seattle, WA 98104",1050 James St,Seattle,WA,98104,Apartment,1,1,1500,,47.606569,-122.323065
+"10500-Meridian-Ave-N,-Seattle,-WA-98133","10500 Meridian Ave N, Seattle, WA 98133",10500 Meridian Ave N,Seattle,WA,98133,Apartment,1.5,2,1609,,47.705479,-122.332512
+"10501-8th-Ave-NE,-Apt-312,-Seattle,-WA-98125","10501 8th Ave NE, Apt 312, Seattle, WA 98125",10501 8th Ave NE,Seattle,WA,98125,Apartment,1,1,1800,744,47.705536,-122.32123
+"10525-24th-Ave-NE,-Seattle,-WA-98125","10525 24th Ave NE, Seattle, WA 98125",10525 24th Ave NE,Seattle,WA,98125,Apartment,1,2,1250,,47.705514,-122.302426
+"10711-8th-Ave-NE,-Seattle,-WA-98125","10711 8th Ave NE, Seattle, WA 98125",10711 8th Ave NE,Seattle,WA,98125,Apartment,1,1,1775,,47.707008,-122.321083
+"10720-5th-Ave-NE,-Seattle,-WA-98125","10720 5th Ave NE, Seattle, WA 98125",10720 5th Ave NE,Seattle,WA,98125,Apartment,,,1475,,47.707509,-122.322497
+"11-W-Mercer-St,-Seattle,-WA-98119","11 W Mercer St, Seattle, WA 98119",11 W Mercer St,Seattle,WA,98119,Apartment,1,0,1700,,47.62439,-122.35707
+"11038-Lake-City-Way-NE,-Seattle,-WA-98125","11038 Lake City Way NE, Seattle, WA 98125",11038 Lake City Way NE,Seattle,WA,98125,Apartment,2,2,1895,,47.709473,-122.300308
+"1108-9th-Ave-W,-Seattle,-WA-98119","1108 9th Ave W, Seattle, WA 98119",1108 9th Ave W,Seattle,WA,98119,Apartment,1,1,2395,,47.629074,-122.368629
+"1111-E-Union-St,-Seattle,-WA-98122","1111 E Union St, Seattle, WA 98122",1111 E Union St,Seattle,WA,98122,Apartment,1,1,2000,701,47.612741,-122.317473
+"1111-E-Pine-St,-Seattle,-WA-98122","1111 E Pine St, Seattle, WA 98122",1111 E Pine St,Seattle,WA,98122,Apartment,1,1,2225,614,47.615002,-122.317778
+"1120-N-93rd-St,-Seattle,-WA-98103","1120 N 93rd St, Seattle, WA 98103",1120 N 93rd St,Seattle,WA,98103,Apartment,1,1,1695,,47.696569,-122.34344
+"11202-2nd-Ln-SW,-Seattle,-WA-98146","11202 2nd Ln SW, Seattle, WA 98146",11202 2nd Ln SW,Seattle,WA,98146,Apartment,,,1416,,47.50228,-122.337321
+"1121-N-91st-St,-Seattle,-WA-98103","1121 N 91st St, Seattle, WA 98103",1121 N 91st St,Seattle,WA,98103,Apartment,1,1,1550,,47.694693,-122.34351
+"11210-Meridian-Ave-N,-Seattle,-WA-98133","11210 Meridian Ave N, Seattle, WA 98133",11210 Meridian Ave N,Seattle,WA,98133,Apartment,1,1,1225,,47.710159,-122.333731
+"1122-E-Denny-Way,-Seattle,-WA-98122","1122 E Denny Way, Seattle, WA 98122",1122 E Denny Way,Seattle,WA,98122,Apartment,1,3,2700,,47.61894,-122.317127
+"11222-11244-Greenwood-Ave-N,-Seattle,-WA-98133","11222 11244 Greenwood Ave N, Seattle, WA 98133",11222 11244 Greenwood Ave N,Seattle,WA,98133,Apartment,1,1,1595,,47.711765,-122.355057
+"1130-N-115th-St,-Seattle,-WA-98133","1130 N 115th St, Seattle, WA 98133",1130 N 115th St,Seattle,WA,98133,Apartment,,,2175,,47.712814,-122.343029
+"1131-N-93rd-St,-Apt-3,-Seattle,-WA-98103","1131 N 93rd St, Apt 3, Seattle, WA 98103",1131 N 93rd St,Seattle,WA,98103,Apartment,1,2,2000,705,47.696139,-122.343232
+"1139-Nw-Market-St,-Seattle,-WA-98107","1139 Nw Market St, Seattle, WA 98107",1139 Nw Market St,Seattle,WA,98107,Apartment,,,1295,,47.66839,-122.372213
+"1141-N-91st-St,-Seattle,-WA-98103","1141 N 91st St, Seattle, WA 98103",1141 N 91st St,Seattle,WA,98103,Apartment,1,0,1095,,47.694688,-122.342678
+"11412-20th-Ave-S,-Seattle,-WA-98168","11412 20th Ave S, Seattle, WA 98168",11412 20th Ave S,Seattle,WA,98168,Apartment,1,1,1395,,47.500782,-122.307064
+"11429-Rainier-Ave-S,-Seattle,-WA-98178","11429 Rainier Ave S, Seattle, WA 98178",11429 Rainier Ave S,Seattle,WA,98178,Single Family,1,1,1295,,47.500175,-122.221436
+"1145-Republican-St,-Seattle,-WA-98109","1145 Republican St, Seattle, WA 98109",1145 Republican St,Seattle,WA,98109,Apartment,1,1,3022,725,47.622858,-122.334821
+"1146-Harrison-St,-Seattle,-WA-98109","1146 Harrison St, Seattle, WA 98109",1146 Harrison St,Seattle,WA,98109,Apartment,1,1,2373,875,47.62237,-122.33493
+"1146-N-91st-St,-Seattle,-WA-98103","1146 N 91st St, Seattle, WA 98103",1146 N 91st St,Seattle,WA,98103,Apartment,1,1,1550,,47.695109,-122.34249
+"115-Warren-Ave-N,-Seattle,-WA-98109","115 Warren Ave N, Seattle, WA 98109",115 Warren Ave N,Seattle,WA,98109,Apartment,1,0,1821,,47.6191,-122.354516
+"1158-N-91st-St,-Seattle,-WA-98103","1158 N 91st St, Seattle, WA 98103",1158 N 91st St,Seattle,WA,98103,Apartment,1,2,2045,,47.695107,-122.342165
+"116-Warren-Ave-N,-Seattle,-WA-98109","116 Warren Ave N, Seattle, WA 98109",116 Warren Ave N,Seattle,WA,98109,Apartment,2,2,3150,,47.619097,-122.353769
+"11660-Renton-Ave-S,-Seattle,-WA-98178","11660 Renton Ave S, Seattle, WA 98178",11660 Renton Ave S,Seattle,WA,98178,Apartment,1,1,1125,,47.498404,-122.248463
+"11758-Greenwood-Ave-N,-Apt-3,-Seattle,-WA-98133","11758 Greenwood Ave N, Apt 3, Seattle, WA 98133",11758 Greenwood Ave N,Seattle,WA,98133,Apartment,1,1,1495,700,47.715702,-122.355125
+"118-Republican-St,-Seattle,-WA-98109","118 Republican St, Seattle, WA 98109",118 Republican St,Seattle,WA,98109,Apartment,,,1646,,47.62369,-122.35478
+"11914-1st-Ave-SW,-Apt-2,-Seattle,-WA-98146","11914 1st Ave SW, Apt 2, Seattle, WA 98146",11914 1st Ave SW,Seattle,WA,98146,Apartment,1,2,1855,774,47.496167,-122.334943
+"120-10th-Ave-E,-Seattle,-WA-98102","120 10th Ave E, Seattle, WA 98102",120 10th Ave E,Seattle,WA,98102,Condo,1,0,2688,400,47.619461,-122.319138
+"120-Broadway,-Seattle,-WA-98122","120 Broadway, Seattle, WA 98122",120 Broadway,Seattle,WA,98122,Apartment,,,1455,,47.602306,-122.320122
+"120-Westlake-Ave-N,-Seattle,-WA-98109","120 Westlake Ave N, Seattle, WA 98109",120 Westlake Ave N,Seattle,WA,98109,Condo,1,1,3850,694,47.619118,-122.338083
+"1200-E-Pike-St,-Seattle,-WA-98122","1200 E Pike St, Seattle, WA 98122",1200 E Pike St,Seattle,WA,98122,Apartment,1,,1802,,47.614309,-122.316513
+"12004-17th-Ave-NE,-Seattle,-WA-98125","12004 17th Ave NE, Seattle, WA 98125",12004 17th Ave NE,Seattle,WA,98125,Single Family,1,2,2800,1850,47.716038,-122.309601
+"1201-Mercer-St,-Seattle,-WA-98109","1201 Mercer St, Seattle, WA 98109",1201 Mercer St,Seattle,WA,98109,Apartment,,,2223,,47.62394,-122.332751
+"12038-31st-Ave-NE,-Seattle,-WA-98125","12038 31st Ave NE, Seattle, WA 98125",12038 31st Ave NE,Seattle,WA,98125,Apartment,2,2,1990,,47.716597,-122.294869
+"1205-Queen-Anne-Ave-N,-Seattle,-WA-98109","1205 Queen Anne Ave N, Seattle, WA 98109",1205 Queen Anne Ave N,Seattle,WA,98109,Apartment,1,1,1750,,47.629843,-122.357054
+"1208-10th-Ave-W,-Seattle,-WA-98119","1208 10th Ave W, Seattle, WA 98119",1208 10th Ave W,Seattle,WA,98119,Apartment,1,1,1950,,47.630195,-122.369991
+"1210-15th-Ave-E,-Seattle,-WA-98112","1210 15th Ave E, Seattle, WA 98112",1210 15th Ave E,Seattle,WA,98112,Apartment,2,2,2395,,47.631377,-122.312152
+"1212-E-Howell-St,-Seattle,-WA-98122","1212 E Howell St, Seattle, WA 98122",1212 E Howell St,Seattle,WA,98122,Apartment,1,1,1550,,47.61781,-122.316108
+"1220-Boren-Ave,-Seattle,-WA-98101","1220 Boren Ave, Seattle, WA 98101",1220 Boren Ave,Seattle,WA,98101,Apartment,1,0,2055,,47.611425,-122.326509
+"1220-E-Remington-Ct,-Seattle,-WA-98122","1220 E Remington Ct, Seattle, WA 98122",1220 E Remington Ct,Seattle,WA,98122,Apartment,1,0,1225,,47.605728,-122.315796
+"1221-1st-Ave,-Seattle,-WA-98101","1221 1st Ave, Seattle, WA 98101",1221 1st Ave,Seattle,WA,98101,Apartment,2,2,1942,1325,47.60609,-122.33872
+"123-2nd-Ave-N,-Seattle,-WA-98109","123 2nd Ave N, Seattle, WA 98109",123 2nd Ave N,Seattle,WA,98109,Apartment,,,2057,,47.619341,-122.353207
+"123-Broadway,-Seattle,-WA-98122","123 Broadway, Seattle, WA 98122",123 Broadway,Seattle,WA,98122,Apartment,,,1956,,47.60245,-122.32119
+"12311-32nd-Ave-NE,-Seattle,-WA-98125","12311 32nd Ave NE, Seattle, WA 98125",12311 32nd Ave NE,Seattle,WA,98125,Apartment,,,1688,,47.717846,-122.294303
+"12316-28th-Ave-NE,-Seattle,-WA-98125","12316 28th Ave NE, Seattle, WA 98125",12316 28th Ave NE,Seattle,WA,98125,Apartment,2,2,1717,,47.718334,-122.297486
+"12317-15th-Ave-NE,-Seattle,-WA-98125","12317 15th Ave NE, Seattle, WA 98125",12317 15th Ave NE,Seattle,WA,98125,Apartment,1,1,1550,,47.718099,-122.313053
+"12325-28th-Ave-Ne-Apt-B,-Seattle,-WA-98125","12325 28th Ave Ne Apt B, Seattle, WA 98125",12325 28th Ave Ne Apt B,Seattle,WA,98125,Townhouse,1.5,3,2350,1268,47.718264,-122.29816
+"12360-35th-Ave-NE,-Seattle,-WA-98125","12360 35th Ave NE, Seattle, WA 98125",12360 35th Ave NE,Seattle,WA,98125,Apartment,1,1,1400,,47.719053,-122.290365
+"1260-Republican-St,-Seattle,-WA-98109","1260 Republican St, Seattle, WA 98109",1260 Republican St,Seattle,WA,98109,Apartment,2,2,2139,804,47.62334,-122.33098
+"12700-37th-Ave-NE,-Seattle,-WA-98125","12700 37th Ave NE, Seattle, WA 98125",12700 37th Ave NE,Seattle,WA,98125,Single Family,2,5,4000,2380,47.72133,-122.288199
+"12736-Lake-City-Way-NE,-Seattle,-WA-98125","12736 Lake City Way NE, Seattle, WA 98125",12736 Lake City Way NE,Seattle,WA,98125,Apartment,1,0,1783,,47.721957,-122.292895
+"1280-Harrison-St,-Seattle,-WA-98109","1280 Harrison St, Seattle, WA 98109",1280 Harrison St,Seattle,WA,98109,Apartment,2,3,2337,1296,47.6228,-122.33123
+"12825-60th-Ln-S,-Seattle,-WA-98178","12825 60th Ln S, Seattle, WA 98178",12825 60th Ln S,Seattle,WA,98178,Apartment,1,2,1400,,47.488071,-122.257836
+"1287-Westlake-Ave-N,-Seattle,-WA-98109","1287 Westlake Ave N, Seattle, WA 98109",1287 Westlake Ave N,Seattle,WA,98109,Apartment,,,2345,,47.631554,-122.3414
+"130-Harvard-Ave-E,-Seattle,-WA-98102","130 Harvard Ave E, Seattle, WA 98102",130 Harvard Ave E,Seattle,WA,98102,Apartment,1,0,2182,,47.619731,-122.321276
+"130-Sw-112th-St,-Seattle,-WA-98146","130 Sw 112th St, Seattle, WA 98146",130 Sw 112th St,Seattle,WA,98146,Apartment,,,1895,,47.503864,-122.335905
+"1300-14th-Ave-S,-Seattle,-WA-98144","1300 14th Ave S, Seattle, WA 98144",1300 14th Ave S,Seattle,WA,98144,Apartment,1,1,1495,,47.591324,-122.314497
+"1300-6th-Ave-N,-Seattle,-WA-98109","1300 6th Ave N, Seattle, WA 98109",1300 6th Ave N,Seattle,WA,98109,Apartment,1,1,1195,,47.630724,-122.344628
+"1300-E-Denny-Way,-Seattle,-WA-98122","1300 E Denny Way, Seattle, WA 98122",1300 E Denny Way,Seattle,WA,98122,Apartment,1,1,1795,,47.618954,-122.31523
+"1305-Dexter-Ave-N,-Seattle,-WA-98109","1305 Dexter Ave N, Seattle, WA 98109",1305 Dexter Ave N,Seattle,WA,98109,Apartment,,,1525,,47.63077,-122.34258
+"1306-1st-Ave-W,-Seattle,-WA-98119","1306 1st Ave W, Seattle, WA 98119",1306 1st Ave W,Seattle,WA,98119,Apartment,1,1,1995,,47.630694,-122.357604
+"1307-N-43rd-St,-Seattle,-WA-98103","1307 N 43rd St, Seattle, WA 98103",1307 N 43rd St,Seattle,WA,98103,Apartment,1,0,1395,510,47.658927,-122.341906
+"1307-N-Northgate-Way,-Seattle,-WA-98133","1307 N Northgate Way, Seattle, WA 98133",1307 N Northgate Way,Seattle,WA,98133,Apartment,1,0,1295,,47.704828,-122.34159
+"1310-Minor-Ave,-Seattle,-WA-98101","1310 Minor Ave, Seattle, WA 98101",1310 Minor Ave,Seattle,WA,98101,Apartment,2,1,1928,,47.612686,-122.326279
+"1315-E-Jefferson-St,-Seattle,-WA-98122","1315 E Jefferson St, Seattle, WA 98122",1315 E Jefferson St,Seattle,WA,98122,Apartment,1,1,1875,,47.605981,-122.31482
+"1319-Ne-65th-St,-Seattle,-WA-98115","1319 Ne 65th St, Seattle, WA 98115",1319 Ne 65th St,Seattle,WA,98115,Apartment,1,0,2250,,47.675613,-122.31348
+"1321-E-John-St,-Seattle,-WA-98102","1321 E John St, Seattle, WA 98102",1321 E John St,Seattle,WA,98102,Apartment,1,1,2150,,47.619789,-122.31469
+"1321-Queen-Anne-Ave-N,-Seattle,-WA-98109","1321 Queen Anne Ave N, Seattle, WA 98109",1321 Queen Anne Ave N,Seattle,WA,98109,Apartment,1,1,1650,,47.631036,-122.357079
+"1323-E-Pine-St,-Seattle,-WA-98122","1323 E Pine St, Seattle, WA 98122",1323 E Pine St,Seattle,WA,98122,Apartment,1,1,1400,,47.615107,-122.314633
+"13280-Linden-Ave-N,-Seattle,-WA-98133","13280 Linden Ave N, Seattle, WA 98133",13280 Linden Ave N,Seattle,WA,98133,Apartment,1,,1266,,47.726635,-122.347198
+"1330-Boren-Ave,-Seattle,-WA-98101","1330 Boren Ave, Seattle, WA 98101",1330 Boren Ave,Seattle,WA,98101,Apartment,1,0,1789,,47.61239,-122.327486
+"1331-Terry-Ave,-Seattle,-WA-98101","1331 Terry Ave, Seattle, WA 98101",1331 Terry Ave,Seattle,WA,98101,Apartment,1,1,1695,,47.61172,-122.329316
+"1340-15th-Ave-S,-Seattle,-WA-98144","1340 15th Ave S, Seattle, WA 98144",1340 15th Ave S,Seattle,WA,98144,Apartment,1,0,895,,47.59064,-122.313991
+"13522-40th-Ave-NE,-Seattle,-WA-98125","13522 40th Ave NE, Seattle, WA 98125",13522 40th Ave NE,Seattle,WA,98125,Single Family,2,3,3650,2050,47.727073,-122.28512
+"13530-Linden-Ave-N,-Seattle,-WA-98133","13530 Linden Ave N, Seattle, WA 98133",13530 Linden Ave N,Seattle,WA,98133,Apartment,,,1475,,47.728183,-122.346857
+"13543-Greenwood-Ave-N,-Seattle,-WA-98133","13543 Greenwood Ave N, Seattle, WA 98133",13543 Greenwood Ave N,Seattle,WA,98133,Apartment,1,1,1725,,47.72787,-122.356024
+"13713-Greenwood-Ave-N,-Seattle,-WA-98133","13713 Greenwood Ave N, Seattle, WA 98133",13713 Greenwood Ave N,Seattle,WA,98133,Single Family,2.5,3,2800,1700,47.729136,-122.355987
+"13725-32nd-Ave-NE,-Seattle,-WA-98125","13725 32nd Ave NE, Seattle, WA 98125",13725 32nd Ave NE,Seattle,WA,98125,Apartment,1,2,1625,,47.728975,-122.294964
+"13730-Lake-City-Way-NE,-Seattle,-WA-98125","13730 Lake City Way NE, Seattle, WA 98125",13730 Lake City Way NE,Seattle,WA,98125,Apartment,,,1755,,47.729504,-122.291878
+"1400-E-Spruce-St,-Apt-3,-Seattle,-WA-98122","1400 E Spruce St, Apt 3, Seattle, WA 98122",1400 E Spruce St,Seattle,WA,98122,Apartment,1,2,1850,900,47.603668,-122.31385
+"1401-1409-Ne-56th-St,-Seattle,-WA-98105","1401-1409 Ne 56th St, Seattle, WA 98105",1401-1409 Ne 56th St,Seattle,WA,98105,Apartment,1,1,1525,,47.669337,-122.312845
+"1401-S-Holgate-St,-Seattle,-WA-98144","1401 S Holgate St, Seattle, WA 98144",1401 S Holgate St,Seattle,WA,98144,Apartment,1,0,1395,,47.586228,-122.314293
+"14027-Lake-City-Way-NE,-Seattle,-WA-98125","14027 Lake City Way NE, Seattle, WA 98125",14027 Lake City Way NE,Seattle,WA,98125,Apartment,2,2,1245,,47.731272,-122.293073
+"1404-Boylston-Ave,-Seattle,-WA-98122","1404 Boylston Ave, Seattle, WA 98122",1404 Boylston Ave,Seattle,WA,98122,Apartment,1,1,1249,,47.613344,-122.323011
+"1404-E-Yesler-Way,-Seattle,-WA-98122","1404 E Yesler Way, Seattle, WA 98122",1404 E Yesler Way,Seattle,WA,98122,Single Family,1,0,1295,,47.601893,-122.31378
+"1408-E-Union-St,-Seattle,-WA-98122","1408 E Union St, Seattle, WA 98122",1408 E Union St,Seattle,WA,98122,Apartment,1,0,1,,47.613287,-122.313749
+"1414-10th-Ave,-Seattle,-WA-98122","1414 10th Ave, Seattle, WA 98122",1414 10th Ave,Seattle,WA,98122,Apartment,,,2310,,47.61328,-122.31879
+"1414-E-Yesler-Way,-Seattle,-WA-98122","1414 E Yesler Way, Seattle, WA 98122",1414 E Yesler Way,Seattle,WA,98122,Apartment,1,0,1050,,47.60211,-122.31301
+"1416-E-Marion-St,-Seattle,-WA-98122","1416 E Marion St, Seattle, WA 98122",1416 E Marion St,Seattle,WA,98122,Apartment,1,1,1600,,47.610554,-122.313393
+"1417-Belmont-Ave,-Seattle,-WA-98122","1417 Belmont Ave, Seattle, WA 98122",1417 Belmont Ave,Seattle,WA,98122,Apartment,1,1,1650,,47.613536,-122.324776
+"1417-E-Howell-St,-Seattle,-WA-98122","1417 E Howell St, Seattle, WA 98122",1417 E Howell St,Seattle,WA,98122,Townhouse,2,2,3700,1106,47.617386,-122.313507
+"1420-Boren-Ave,-Seattle,-WA-98101","1420 Boren Ave, Seattle, WA 98101",1420 Boren Ave,Seattle,WA,98101,Apartment,1,0,1095,,47.613173,-122.328203
+"1421-2nd-Ave-N,-Seattle,-WA-98109","1421 2nd Ave N, Seattle, WA 98109",1421 2nd Ave N,Seattle,WA,98109,Apartment,1,2,2895,,47.631703,-122.352974
+"1423-Boylston-Ave,-Seattle,-WA-98122","1423 Boylston Ave, Seattle, WA 98122",1423 Boylston Ave,Seattle,WA,98122,Apartment,1,1,1450,,47.613679,-122.323721
+"1425-Spring-St,-Seattle,-WA-98104","1425 Spring St, Seattle, WA 98104",1425 Spring St,Seattle,WA,98104,Apartment,3,3,6305,1801,47.61143,-122.32122
+"1426-Nw-59th-St,-Apt-B,-Seattle,-WA-98107","1426 Nw 59th St, Apt B, Seattle, WA 98107",1426 Nw 59th St,Seattle,WA,98107,Apartment,2.5,2,2895,1280,47.671783,-122.374951
+"1427-11th-Ave,-Seattle,-WA-98122","1427 11th Ave, Seattle, WA 98122",1427 11th Ave,Seattle,WA,98122,Apartment,1,,1300,,47.613664,-122.318527
+"143-Nw-85th-St,-Seattle,-WA-98117","143 Nw 85th St, Seattle, WA 98117",143 Nw 85th St,Seattle,WA,98117,Apartment,1,0,900,,47.690392,-122.359803
+"1430-Nw-64th-St,-Seattle,-WA-98107","1430 Nw 64th St, Seattle, WA 98107",1430 Nw 64th St,Seattle,WA,98107,Apartment,1,1,1950,,47.675505,-122.375102
+"14300-32nd-Ave-NE,-Apt-410,-Seattle,-WA-98125","14300 32nd Ave NE, Apt 410, Seattle, WA 98125",14300 32nd Ave NE,Seattle,WA,98125,Single Family,1,1,1425,600,47.732189,-122.293462
+"14300-Greenwood-Ave-N,-Seattle,-WA-98133","14300 Greenwood Ave N, Seattle, WA 98133",14300 Greenwood Ave N,Seattle,WA,98133,Apartment,1,1,1750,,47.732525,-122.355057
+"1443-Nw-63rd-St,-Seattle,-WA-98107","1443 Nw 63rd St, Seattle, WA 98107",1443 Nw 63rd St,Seattle,WA,98107,Apartment,1,0,1265,,47.674319,-122.375511
+"1500-15th-Ave-E,-Seattle,-WA-98112","1500 15th Ave E, Seattle, WA 98112",1500 15th Ave E,Seattle,WA,98112,Apartment,1,1,1595,,47.632525,-122.312188
+"1501-California-Ave-SW,-Seattle,-WA-98116","1501 California Ave SW, Seattle, WA 98116",1501 California Ave SW,Seattle,WA,98116,Apartment,1,1,1995,,47.590264,-122.386591
+"1501-Nw-56th-St,-Seattle,-WA-98107","1501 Nw 56th St, Seattle, WA 98107",1501 Nw 56th St,Seattle,WA,98107,Apartment,1,1,1780,504,47.669125,-122.37698
+"1505-Queen-Anne-Ave-N,-Seattle,-WA-98109","1505 Queen Anne Ave N, Seattle, WA 98109",1505 Queen Anne Ave N,Seattle,WA,98109,Apartment,2,2,2995,,47.632562,-122.357185
+"151-John-St,-Seattle,-WA-98109","151 John St, Seattle, WA 98109",151 John St,Seattle,WA,98109,Apartment,1,1,2690,,47.619589,-122.353765
+"1510-13th-Ave-S,-Seattle,-WA-98144","1510 13th Ave S, Seattle, WA 98144",1510 13th Ave S,Seattle,WA,98144,Apartment,1,2,1500,,47.589474,-122.315689
+"1511-Boylston-Ave,-Seattle,-WA-98122","1511 Boylston Ave, Seattle, WA 98122",1511 Boylston Ave,Seattle,WA,98122,Apartment,1,1,1495,,47.614529,-122.323732
+"1515-Bellevue-Ave,-Seattle,-WA-98122","1515 Bellevue Ave, Seattle, WA 98122",1515 Bellevue Ave,Seattle,WA,98122,Apartment,1,1,1790,,47.614521,-122.327161
+"1515-Nw-52nd-St,-Seattle,-WA-98107","1515 Nw 52nd St, Seattle, WA 98107",1515 Nw 52nd St,Seattle,WA,98107,Apartment,1,2,2125,,47.666206,-122.377133
+"1516-Nw-51st-St,-Seattle,-WA-98107","1516 Nw 51st St, Seattle, WA 98107",1516 Nw 51st St,Seattle,WA,98107,Apartment,1,,1720,,47.665933,-122.377045
+"1519-E-Spring-St,-Seattle,-WA-98122","1519 E Spring St, Seattle, WA 98122",1519 E Spring St,Seattle,WA,98122,Apartment,1,0,895,,47.611378,-122.311857
+"1522-Ne-175th-St,-Unit-101,-Seattle,-WA-98155","1522 Ne 175th St, Unit 101, Seattle, WA 98155",1522 Ne 175th St,Seattle,WA,98155,Single Family,2,2,1750,857,47.756236,-122.312439
+"1523-E-Madison-St,-Seattle,-WA-98122","1523 E Madison St, Seattle, WA 98122",1523 E Madison St,Seattle,WA,98122,Apartment,1,0,1300,,47.61472,-122.311685
+"1525-14th-Ave,-Seattle,-WA-98122","1525 14th Ave, Seattle, WA 98122",1525 14th Ave,Seattle,WA,98122,Apartment,1,1,2353,623,47.614941,-122.314629
+"1525-9th-Ave,-Seattle,-WA-98101","1525 9th Ave, Seattle, WA 98101",1525 9th Ave,Seattle,WA,98101,Apartment,,,2731,,47.61317,-122.332154
+"1530-15th-Ave,-Seattle,-WA-98122","1530 15th Ave, Seattle, WA 98122",1530 15th Ave,Seattle,WA,98122,Apartment,1,1,2082,,47.614954,-122.312427
+"1530-Belmont-Ave,-Seattle,-WA-98122","1530 Belmont Ave, Seattle, WA 98122",1530 Belmont Ave,Seattle,WA,98122,Apartment,1,2,2230,506,47.61459,-122.324051
+"1532-Nw-51st-St,-Seattle,-WA-98107","1532 Nw 51st St, Seattle, WA 98107",1532 Nw 51st St,Seattle,WA,98107,Apartment,1,1,1525,,47.665935,-122.377639
+"1535-Bellevue-Ave,-Seattle,-WA-98122","1535 Bellevue Ave, Seattle, WA 98122",1535 Bellevue Ave,Seattle,WA,98122,Apartment,1,1,2492,,47.615059,-122.327153
+"1537-Nw-56th-St,-Seattle,-WA-98107","1537 Nw 56th St, Seattle, WA 98107",1537 Nw 56th St,Seattle,WA,98107,Apartment,,,2735,,47.669231,-122.378028
+"1545-Nw-Market-St,-Seattle,-WA-98107","1545 Nw Market St, Seattle, WA 98107",1545 Nw Market St,Seattle,WA,98107,Apartment,1,2,2273,,47.668319,-122.378212
+"155-17th-Ave,-Seattle,-WA-98122","155 17th Ave, Seattle, WA 98122",155 17th Ave,Seattle,WA,98122,Apartment,1,0,1225,,47.602975,-122.310536
+"1551-Minor-Ave,-Seattle,-WA-98101","1551 Minor Ave, Seattle, WA 98101",1551 Minor Ave,Seattle,WA,98101,Apartment,1,,1850,,47.61446,-122.32865
+"1551-Nw-54th-St,-Seattle,-WA-98107","1551 Nw 54th St, Seattle, WA 98107",1551 Nw 54th St,Seattle,WA,98107,Single Family,2,1,1700,,47.667686,-122.378201
+"1552-Nw-52nd-St,-Seattle,-WA-98107","1552 Nw 52nd St, Seattle, WA 98107",1552 Nw 52nd St,Seattle,WA,98107,Apartment,1,1,1700,,47.6668,-122.37845
+"1600-2nd-Ave,-Seattle,-WA-98101","1600 2nd Ave, Seattle, WA 98101",1600 2nd Ave,Seattle,WA,98101,Apartment,1,1,2890,584,47.61093,-122.33982
+"1601-9th-Ave,-Seattle,-WA-98101","1601 9th Ave, Seattle, WA 98101",1601 9th Ave,Seattle,WA,98101,Apartment,1,1,2289,653,47.61355,-122.332501
+"1611-8th-Ave-N,-Seattle,-WA-98109","1611 8th Ave N, Seattle, WA 98109",1611 8th Ave N,Seattle,WA,98109,Apartment,1,0,1123,,47.633411,-122.341444
+"1613-Summit-Ave,-Seattle,-WA-98122","1613 Summit Ave, Seattle, WA 98122",1613 Summit Ave,Seattle,WA,98122,Apartment,1,1,1725,,47.615642,-122.325899
+"1615-15th-Ave,-Seattle,-WA-98122","1615 15th Ave, Seattle, WA 98122",1615 15th Ave,Seattle,WA,98122,Apartment,1,1,1795,,47.615792,-122.313146
+"1616-E-Howell-St,-Seattle,-WA-98122","1616 E Howell St, Seattle, WA 98122",1616 E Howell St,Seattle,WA,98122,Apartment,1,1,2595,,47.617734,-122.310516
+"1622-Aurora-Ave-N,-Seattle,-WA-98109","1622 Aurora Ave N, Seattle, WA 98109",1622 Aurora Ave N,Seattle,WA,98109,Apartment,2,2,1850,947,47.634104,-122.34312
+"1627-10th-Ave-W,-Seattle,-WA-98119","1627 10th Ave W, Seattle, WA 98119",1627 10th Ave W,Seattle,WA,98119,Apartment,1,0,1700,,47.634384,-122.370764
+"165-17th-Ave,-Seattle,-WA-98122","165 17th Ave, Seattle, WA 98122",165 17th Ave,Seattle,WA,98122,Apartment,1,2,2395,,47.603244,-122.31051
+"168-Boston-St,-Seattle,-WA-98109","168 Boston St, Seattle, WA 98109",168 Boston St,Seattle,WA,98109,Apartment,1,2,1795,,47.638482,-122.353517
+"170-11th-Ave,-Seattle,-WA-98122","170 11th Ave, Seattle, WA 98122",170 11th Ave,Seattle,WA,98122,Apartment,1,1,1725,,47.603352,-122.317726
+"1700-Summit-Ave,-Seattle,-WA-98122","1700 Summit Ave, Seattle, WA 98122",1700 Summit Ave,Seattle,WA,98122,Apartment,1,1,1695,435,47.616517,-122.32522
+"1701-12th-Ave-S,-Seattle,-WA-98144","1701 12th Ave S, Seattle, WA 98144",1701 12th Ave S,Seattle,WA,98144,Apartment,1,,1825,,47.58797,-122.317653
+"1701-Nw-56th-St,-Seattle,-WA-98107","1701 Nw 56th St, Seattle, WA 98107",1701 Nw 56th St,Seattle,WA,98107,Apartment,,,1653,,47.669232,-122.379119
+"1703-E-Union-St,-Seattle,-WA-98122","1703 E Union St, Seattle, WA 98122",1703 E Union St,Seattle,WA,98122,Apartment,1,2,2495,,47.612716,-122.309874
+"1705-Belmont-Ave,-Seattle,-WA-98122","1705 Belmont Ave, Seattle, WA 98122",1705 Belmont Ave,Seattle,WA,98122,Apartment,1,,1600,,47.616565,-122.324815
+"1710-Dexter-Ave-N-Unit-A,-Seattle,-WA-98109","1710 Dexter Ave N Unit A, Seattle, WA 98109",1710 Dexter Ave N Unit A,Seattle,WA,98109,Townhouse,2,2,2600,1090,47.634209,-122.341825
+"1711-E-Olive-Way,-Apt-302,-Seattle,-WA-98102","1711 E Olive Way, Apt 302, Seattle, WA 98102",1711 E Olive Way,Seattle,WA,98102,Apartment,1,1,2695,711,47.619454,-122.323157
+"1711-Summit-Ave,-Seattle,-WA-98122","1711 Summit Ave, Seattle, WA 98122",1711 Summit Ave,Seattle,WA,98122,Apartment,1,0,1150,,47.616764,-122.325913
+"1713-Dexter-Ave-N,-Seattle,-WA-98109","1713 Dexter Ave N, Seattle, WA 98109",1713 Dexter Ave N,Seattle,WA,98109,Apartment,1,1,2195,,47.634418,-122.342597
+"1714-Ne-65th-St,-Seattle,-WA-98115","1714 Ne 65th St, Seattle, WA 98115",1714 Ne 65th St,Seattle,WA,98115,Apartment,2,2,1995,,47.676015,-122.30897
+"1715-12th-Ave,-Seattle,-WA-98122","1715 12th Ave, Seattle, WA 98122",1715 12th Ave,Seattle,WA,98122,Apartment,1,0,1275,,47.616904,-122.317288
+"1715-Nw-58th-St,-Seattle,-WA-98107","1715 Nw 58th St, Seattle, WA 98107",1715 Nw 58th St,Seattle,WA,98107,Apartment,1,0,900,,47.670692,-122.379524
+"1717-12th-Ave,-Seattle,-WA-98122","1717 12th Ave, Seattle, WA 98122",1717 12th Ave,Seattle,WA,98122,Apartment,1,0,1495,,47.617013,-122.31729
+"1717-Summit-Ave,-Seattle,-WA-98122","1717 Summit Ave, Seattle, WA 98122",1717 Summit Ave,Seattle,WA,98122,Apartment,1,0,1295,,47.616902,-122.325915
+"1718-Summit-Ave,-Seattle,-WA-98122","1718 Summit Ave, Seattle, WA 98122",1718 Summit Ave,Seattle,WA,98122,Apartment,1,1,1250,,47.616906,-122.325226
+"1723-Summit-Ave,-Seattle,-WA-98122","1723 Summit Ave, Seattle, WA 98122",1723 Summit Ave,Seattle,WA,98122,Apartment,1,0,1150,,47.617032,-122.325917
+"1727-14th-Ave,-Seattle,-WA-98122","1727 14th Ave, Seattle, WA 98122",1727 14th Ave,Seattle,WA,98122,Apartment,1,2,1995,,47.617132,-122.314485
+"1736-Summit-Ave,-Seattle,-WA-98122","1736 Summit Ave, Seattle, WA 98122",1736 Summit Ave,Seattle,WA,98122,Apartment,1,1,1320,,47.617454,-122.325233
+"1800-Boren-Ave,-Seattle,-WA-98101","1800 Boren Ave, Seattle, WA 98101",1800 Boren Ave,Seattle,WA,98101,Apartment,1,0,2388,,47.61651,-122.33137
+"1800-S-Jackson-St,-Seattle,-WA-98144","1800 S Jackson St, Seattle, WA 98144",1800 S Jackson St,Seattle,WA,98144,Apartment,1,1,1720,,47.599667,-122.308315
+"1811-17th-Ave,-Seattle,-WA-98122","1811 17th Ave, Seattle, WA 98122",1811 17th Ave,Seattle,WA,98122,Apartment,2,2,1695,,47.618013,-122.310516
+"1812-E-Republican-St,-Seattle,-WA-98112","1812 E Republican St, Seattle, WA 98112",1812 E Republican St,Seattle,WA,98112,Apartment,1,0,1395,,47.623394,-122.307752
+"1814-E-John-St,-Unit-105,-Seattle,-WA-98112","1814 E John St, Unit 105, Seattle, WA 98112",1814 E John St,Seattle,WA,98112,Apartment,1,,1195,261,47.619865,-122.308006
+"1814-E-John-St,-Unit-215,-Seattle,-WA-98112","1814 E John St, Unit 215, Seattle, WA 98112",1814 E John St,Seattle,WA,98112,Apartment,1,,1195,233,47.619865,-122.308006
+"1814-E-John-St,-Unit-212,-Seattle,-WA-98112","1814 E John St, Unit 212, Seattle, WA 98112",1814 E John St,Seattle,WA,98112,Apartment,1,,1195,251,47.619865,-122.308006
+"1814-E-John-St,-Unit-B02,-Seattle,-WA-98112","1814 E John St, Unit B02, Seattle, WA 98112",1814 E John St,Seattle,WA,98112,Apartment,1,,1150,264,47.619865,-122.308006
+"1815-Bellevue-Ave,-Seattle,-WA-98122","1815 Bellevue Ave, Seattle, WA 98122",1815 Bellevue Ave,Seattle,WA,98122,Apartment,1,0,1075,,47.6182,-122.32713
+"1819-Nw-Central-Pl,---2-306,-Seattle,-WA-98107","1819 Nw Central Pl, # 2-306, Seattle, WA 98107",1819 Nw Central Pl,Seattle,WA,98107,Apartment,1,1,1595,645,47.666723,-122.380382
+"1823-18th-Ave,-Seattle,-WA-98122","1823 18th Ave, Seattle, WA 98122",1823 18th Ave,Seattle,WA,98122,Apartment,1,2,1350,,47.618349,-122.309209
+"1823-Minor-Ave,-Seattle,-WA-98101","1823 Minor Ave, Seattle, WA 98101",1823 Minor Ave,Seattle,WA,98101,Apartment,1,2,1995,1266,47.617062,-122.331501
+"1823-Terry-Ave,-Seattle,-WA-98101","1823 Terry Ave, Seattle, WA 98101",1823 Terry Ave,Seattle,WA,98101,Apartment,,,2103,,47.615863,-122.333437
+"1850-N-34th-St,-Seattle,-WA-98103","1850 N 34th St, Seattle, WA 98103",1850 N 34th St,Seattle,WA,98103,Apartment,,,2471,,47.64823,-122.33596
+"1901-Franklin-Ave-E,-Seattle,-WA-98102","1901 Franklin Ave E, Seattle, WA 98102",1901 Franklin Ave E,Seattle,WA,98102,Apartment,1,0,1517,,47.636037,-122.324936
+"1904-N-140th-St,-Seattle,-WA-98133","1904 N 140th St, Seattle, WA 98133",1904 N 140th St,Seattle,WA,98133,Single Family,2,5,4000,1970,47.730633,-122.335593
+"1911-E-Roy-St,-Seattle,-WA-98112","1911 E Roy St, Seattle, WA 98112",1911 E Roy St,Seattle,WA,98112,Apartment,1,1,1495,,47.624998,-122.306714
+"1915-2nd-Ave,-Seattle,-WA-98101","1915 2nd Ave, Seattle, WA 98101",1915 2nd Ave,Seattle,WA,98101,Apartment,,,1796,,47.611037,-122.341181
+"1925-Eastlake-Ave-E,-Seattle,-WA-98102","1925 Eastlake Ave E, Seattle, WA 98102",1925 Eastlake Ave E,Seattle,WA,98102,Apartment,1,1,1500,,47.636609,-122.326219
+"1938-11th-Ave-W,-Seattle,-WA-98119","1938 11th Ave W, Seattle, WA 98119",1938 11th Ave W,Seattle,WA,98119,Apartment,1,1,2750,,47.637223,-122.371311
+"200-2nd-Ave-W,-Seattle,-WA-98119","200 2nd Ave W, Seattle, WA 98119",200 2nd Ave W,Seattle,WA,98119,Apartment,1,1,2134,543,47.620038,-122.358981
+"2003-Nw-57th-St,-Seattle,-WA-98107","2003 Nw 57th St, Seattle, WA 98107",2003 Nw 57th St,Seattle,WA,98107,Apartment,,,2339,,47.669952,-122.382726
+"2009-23rd-Ave-W,-Seattle,-WA-98199","2009 23rd Ave W, Seattle, WA 98199",2009 23rd Ave W,Seattle,WA,98199,Apartment,1,1,1295,,47.637394,-122.386516
+"201-W-Harrison-St,-Seattle,-WA-98119","201 W Harrison St, Seattle, WA 98119",201 W Harrison St,Seattle,WA,98119,Apartment,1,0,1295,,47.621946,-122.359715
+"2015-2nd-Ave,-Seattle,-WA-98121","2015 2nd Ave, Seattle, WA 98121",2015 2nd Ave,Seattle,WA,98121,Apartment,1,1,2531,697,47.611861,-122.342573
+"2020-E-Madison-St,-Seattle,-WA-98122","2020 E Madison St, Seattle, WA 98122",2020 E Madison St,Seattle,WA,98122,Apartment,,,1972,,47.617882,-122.305277
+"2037-Yale-Ave-E,-Seattle,-WA-98102","2037 Yale Ave E, Seattle, WA 98102",2037 Yale Ave E,Seattle,WA,98102,Apartment,1,0,1275,,47.637847,-122.327458
+"205-19th-Ave-E,-Seattle,-WA-98112","205 19th Ave E, Seattle, WA 98112",205 19th Ave E,Seattle,WA,98112,Apartment,1,0,1495,,47.619895,-122.307573
+"205-Summit-Ave-E,-Seattle,-WA-98102","205 Summit Ave E, Seattle, WA 98102",205 Summit Ave E,Seattle,WA,98102,Apartment,1,1,1450,,47.619825,-122.325645
+"206-5th-Ave-N,-Seattle,-WA-98109","206 5th Ave N, Seattle, WA 98109",206 5th Ave N,Seattle,WA,98109,Apartment,1,1,1982,804,47.62004,-122.34724
+"206-Bell-St,-Seattle,-WA-98121","206 Bell St, Seattle, WA 98121",206 Bell St,Seattle,WA,98121,Apartment,,,1521,,47.61441,-122.345676
+"20810-31st-Ln-S,-Seattle,-WA-98198","20810 31st Ln S, Seattle, WA 98198",20810 31st Ln S,Seattle,WA,98198,Apartment,1.5,2,1634,950,47.415042,-122.292573
+"209-219-22nd-Ave-S,-Seattle,-WA-98144","209-219 22nd Ave S, Seattle, WA 98144",209-219 22nd Ave S,Seattle,WA,98144,Apartment,1,2,2200,,47.600567,-122.303595
+"210-Wall-St,-Seattle,-WA-98121","210 Wall St, Seattle, WA 98121",210 Wall St,Seattle,WA,98121,Apartment,1,1,2660,776,47.61584,-122.348093
+"2108-N-Pacific-St,-Seattle,-WA-98103","2108 N Pacific St, Seattle, WA 98103",2108 N Pacific St,Seattle,WA,98103,Apartment,,,1650,,47.648463,-122.333306
+"2113-N-107th-St,-Seattle,-WA-98133","2113 N 107th St, Seattle, WA 98133",2113 N 107th St,Seattle,WA,98133,Apartment,1,1,1495,,47.706626,-122.333308
+"2116-4th-Ave,-Seattle,-WA-98121","2116 4th Ave, Seattle, WA 98121",2116 4th Ave,Seattle,WA,98121,Apartment,1,1,3153,770,47.61442,-122.341719
+"2117-Waverly-Pl-N,-Seattle,-WA-98109","2117 Waverly Pl N, Seattle, WA 98109",2117 Waverly Pl N,Seattle,WA,98109,Apartment,1,1,1650,,47.638313,-122.34298
+"212-Harvard-Ave-E,-Seattle,-WA-98102","212 Harvard Ave E, Seattle, WA 98102",212 Harvard Ave E,Seattle,WA,98102,Apartment,1,1,1595,,47.620403,-122.321837
+"2121-6th-Ave,-Seattle,-WA-98121","2121 6th Ave, Seattle, WA 98121",2121 6th Ave,Seattle,WA,98121,Apartment,1,1,2080,645,47.61528,-122.34039
+"2121-E-Jefferson-St,-Apt-305,-Seattle,-WA-98122","2121 E Jefferson St, Apt 305, Seattle, WA 98122",2121 E Jefferson St,Seattle,WA,98122,Apartment,1,1,1650,627,47.605827,-122.304161
+"2121-E-Jefferson-St,-Seattle,-WA-98122","2121 E Jefferson St, Seattle, WA 98122",2121 E Jefferson St,Seattle,WA,98122,Apartment,1,2,1795,,47.605827,-122.304105
+"2132-California-Ave-SW,-Seattle,-WA-98116","2132 California Ave SW, Seattle, WA 98116",2132 California Ave SW,Seattle,WA,98116,Apartment,1,1,1695,,47.584316,-122.385995
+"2134-Western-Ave,-Seattle,-WA-98121","2134 Western Ave, Seattle, WA 98121",2134 Western Ave,Seattle,WA,98121,Apartment,,,1663,,47.611912,-122.345449
+"215-1st-Ave-W,-Seattle,-WA-98119","215 1st Ave W, Seattle, WA 98119",215 1st Ave W,Seattle,WA,98119,Apartment,1,0,1996,,47.620118,-122.358424
+"215-Boylston-Ave-E,-Unit-601,-Seattle,-WA-98102","215 Boylston Ave E, Unit 601, Seattle, WA 98102",215 Boylston Ave E,Seattle,WA,98102,Condo,1,1,2595,725,47.620369,-122.323326
+"219-Bellevue-Ave-E,-Seattle,-WA-98102","219 Bellevue Ave E, Seattle, WA 98102",219 Bellevue Ave E,Seattle,WA,98102,Apartment,1,1,1350,,47.620089,-122.327013
+"219-E-Garfield-St,-Seattle,-WA-98102","219 E Garfield St, Seattle, WA 98102",219 E Garfield St,Seattle,WA,98102,Apartment,1,0,1725,,47.63362,-122.32535
+"219-Harvard-Ave-E,-Seattle,-WA-98102","219 Harvard Ave E, Seattle, WA 98102",219 Harvard Ave E,Seattle,WA,98102,Apartment,1,2,2795,,47.62046,-122.322478
+"220-10th-Ave,-Seattle,-WA-98122","220 10th Ave, Seattle, WA 98122",220 10th Ave,Seattle,WA,98122,Apartment,1,0,845,230,47.604188,-122.319032
+"220-16th-Ave-E,-Seattle,-WA-98112","220 16th Ave E, Seattle, WA 98112",220 16th Ave E,Seattle,WA,98112,Apartment,1,1,2050,,47.620317,-122.311001
+"2200-Minor-Ave-E,-Seattle,-WA-98102","2200 Minor Ave E, Seattle, WA 98102",2200 Minor Ave E,Seattle,WA,98102,Apartment,1,2,1975,,47.638412,-122.327984
+"2201-4th-Ave,-Seattle,-WA-98121","2201 4th Ave, Seattle, WA 98121",2201 4th Ave,Seattle,WA,98121,Apartment,,,1828,,47.614618,-122.343274
+"2201-Eastlake-Ave-E,-Seattle,-WA-98102","2201 Eastlake Ave E, Seattle, WA 98102",2201 Eastlake Ave E,Seattle,WA,98102,Apartment,1,0,1995,,47.63855,-122.326118
+"2201-S-Main-St,-Seattle,-WA-98144","2201 S Main St, Seattle, WA 98144",2201 S Main St,Seattle,WA,98144,Apartment,1,1,1295,,47.600128,-122.302963
+"2201-Sw-Holden-St,-Seattle,-WA-98106","2201 Sw Holden St, Seattle, WA 98106",2201 Sw Holden St,Seattle,WA,98106,Apartment,1,1,1765,650,47.53278,-122.36267
+"2203-E-Union-St,-Seattle,-WA-98122","2203 E Union St, Seattle, WA 98122",2203 E Union St,Seattle,WA,98122,Apartment,1,0,1550,,47.612673,-122.303177
+"221-Minor-Ave-N,-Seattle,-WA-98109","221 Minor Ave N, Seattle, WA 98109",221 Minor Ave N,Seattle,WA,98109,Apartment,1,1,2397,534,47.620327,-122.333344
+"221-W-Mercer-St,-Seattle,-WA-98119","221 W Mercer St, Seattle, WA 98119",221 W Mercer St,Seattle,WA,98119,Apartment,1,0,1375,,47.624364,-122.360418
+"2215-Eastlake-Ave-E,-Seattle,-WA-98102","2215 Eastlake Ave E, Seattle, WA 98102",2215 Eastlake Ave E,Seattle,WA,98102,Apartment,1,0,1250,,47.63874,-122.326254
+"2220-Eastlake-Ave-E,-Seattle,-WA-98102","2220 Eastlake Ave E, Seattle, WA 98102",2220 Eastlake Ave E,Seattle,WA,98102,Apartment,1,2,1900,,47.638795,-122.325534
+"2230-4th-Ave,-Seattle,-WA-98121","2230 4th Ave, Seattle, WA 98121",2230 4th Ave,Seattle,WA,98121,Apartment,1,0,1198,,47.615405,-122.343387
+"2230-N-106th-St,-Seattle,-WA-98133","2230 N 106th St, Seattle, WA 98133",2230 N 106th St,Seattle,WA,98133,Apartment,1,2,1895,,47.706139,-122.331009
+"2233-1st-Ave,-Seattle,-WA-98121","2233 1st Ave, Seattle, WA 98121",2233 1st Ave,Seattle,WA,98121,Apartment,1,1,2195,,47.613058,-122.346583
+"2233-Nw-58th-St,-Seattle,-WA-98107","2233 Nw 58th St, Seattle, WA 98107",2233 Nw 58th St,Seattle,WA,98107,Apartment,,,1379,,47.67055,-122.386739
+"2233-Ne-46th-St,-Seattle,-WA-98105","2233 Ne 46th St, Seattle, WA 98105",2233 Ne 46th St,Seattle,WA,98105,Apartment,1,1,1895,,47.661535,-122.303133
+"224-Harvard-Ave-E,-Seattle,-WA-98102","224 Harvard Ave E, Seattle, WA 98102",224 Harvard Ave E,Seattle,WA,98102,Apartment,1,1,1495,,47.620704,-122.321843
+"2249-Ne-46th-St,-Seattle,-WA-98105","2249 Ne 46th St, Seattle, WA 98105",2249 Ne 46th St,Seattle,WA,98105,Apartment,1,1,1795,,47.661536,-122.303392
+"225-Cedar-St,-Seattle,-WA-98121","225 Cedar St, Seattle, WA 98121",225 Cedar St,Seattle,WA,98121,Apartment,,,2335,,47.616761,-122.348875
+"2250-Bonair-Pl-SW,-Seattle,-WA-98116","2250 Bonair Pl SW, Seattle, WA 98116",2250 Bonair Pl SW,Seattle,WA,98116,Apartment,1,1,1925,,47.58329,-122.40017
+"2250-Nw-59th-St,-Seattle,-WA-98107","2250 Nw 59th St, Seattle, WA 98107",2250 Nw 59th St,Seattle,WA,98107,Apartment,2,2,2695,,47.671871,-122.386824
+"2251-Nw-59th-St,-Seattle,-WA-98107","2251 Nw 59th St, Seattle, WA 98107",2251 Nw 59th St,Seattle,WA,98107,Apartment,1,1,1995,,47.671416,-122.386804
+"2269-Ne-53rd-St,-Seattle,-WA-98105","2269 Ne 53rd St, Seattle, WA 98105",2269 Ne 53rd St,Seattle,WA,98105,Apartment,1,1,1395,,47.666962,-122.302338
+"229-Queen-Anne-Ave-N,-Seattle,-WA-98109","229 Queen Anne Ave N, Seattle, WA 98109",229 Queen Anne Ave N,Seattle,WA,98109,Apartment,2,2,3000,1123,47.620688,-122.357117
+"2300-Elliott-Ave,-Seattle,-WA-98121","2300 Elliott Ave, Seattle, WA 98121",2300 Elliott Ave,Seattle,WA,98121,Apartment,1,1,2298,,47.612459,-122.348359
+"2312-3rd-Ave,-Seattle,-WA-98121","2312 3rd Ave, Seattle, WA 98121",2312 3rd Ave,Seattle,WA,98121,Apartment,1,1,1150,,47.615292,-122.345182
+"2329-10th-Ave-E,-Apt-301,-Seattle,-WA-98102","2329 10th Ave E, Apt 301, Seattle, WA 98102",2329 10th Ave E,Seattle,WA,98102,Apartment,1,2,2350,1000,47.640448,-122.320446
+"2334-Elliott-Ave,-Seattle,-WA-98121","2334 Elliott Ave, Seattle, WA 98121",2334 Elliott Ave,Seattle,WA,98121,Apartment,2,2,2538,921,47.612783,-122.348911
+"2341-Ne-55th-St,-Seattle,-WA-98105","2341 Ne 55th St, Seattle, WA 98105",2341 Ne 55th St,Seattle,WA,98105,Apartment,1,2,2100,,47.668231,-122.301207
+"2348-Alki-Ave-SW,-Apt-102,-Seattle,-WA-98116","2348 Alki Ave SW, Apt 102, Seattle, WA 98116",2348 Alki Ave SW,Seattle,WA,98116,Apartment,1,1,2450,1150,47.582348,-122.402176
+"2348-Alki-Ave-SW,-Apt-308,-Seattle,-WA-98116","2348 Alki Ave SW, Apt 308, Seattle, WA 98116",2348 Alki Ave SW,Seattle,WA,98116,Apartment,1,1,1750,580,47.582348,-122.402176
+"2350-Beacon-Ave-S,-Seattle,-WA-98144","2350 Beacon Ave S, Seattle, WA 98144",2350 Beacon Ave S,Seattle,WA,98144,Apartment,1,1,1595,,47.582103,-122.315612
+"2400-E-Boston-St,-Seattle,-WA-98112","2400 E Boston St, Seattle, WA 98112",2400 E Boston St,Seattle,WA,98112,Apartment,1,1,1595,,47.638938,-122.301363
+"2401-3rd-Ave,-Seattle,-WA-98121","2401 3rd Ave, Seattle, WA 98121",2401 3rd Ave,Seattle,WA,98121,Apartment,1,1,2403,,47.61546,-122.34658
+"2401-Boylston-Ave-E,-Seattle,-WA-98102","2401 Boylston Ave E, Seattle, WA 98102",2401 Boylston Ave E,Seattle,WA,98102,Single Family,1,1,1290,350,47.641495,-122.323803
+"2405-Nw-65th-St,-Seattle,-WA-98117","2405 Nw 65th St, Seattle, WA 98117",2405 Nw 65th St,Seattle,WA,98117,Apartment,2,2,2295,,47.675758,-122.388088
+"241-Yale-Ave-N,-Seattle,-WA-98109","241 Yale Ave N, Seattle, WA 98109",241 Yale Ave N,Seattle,WA,98109,Apartment,1,2,1786,556,47.62051,-122.33135
+"2425-Harbor-Ave-SW,-Seattle,-WA-98126","2425 Harbor Ave SW, Seattle, WA 98126",2425 Harbor Ave SW,Seattle,WA,98126,Apartment,2,2,1695,925,47.581618,-122.373469
+"2428-Nw-Market-St,-Seattle,-WA-98107","2428 Nw Market St, Seattle, WA 98107",2428 Nw Market St,Seattle,WA,98107,Apartment,2,2,2210,1041,47.669114,-122.388686
+"2447-Nw-58th-St,-Apt-B,-Seattle,-WA-98107","2447 Nw 58th St, Apt B, Seattle, WA 98107",2447 Nw 58th St,Seattle,WA,98107,Apartment,2,3,2655,1050,47.670691,-122.389716
+"2450-Aurora-Ave-N,-Seattle,-WA-98109","2450 Aurora Ave N, Seattle, WA 98109",2450 Aurora Ave N,Seattle,WA,98109,Apartment,1,1,1495,,47.641012,-122.345614
+"2483-Birch-Ave-N,-Seattle,-WA-98109","2483 Birch Ave N, Seattle, WA 98109",2483 Birch Ave N,Seattle,WA,98109,Apartment,2,2,2045,,47.641714,-122.346432
+"2500-E-Denny-Way,-Seattle,-WA-98122","2500 E Denny Way, Seattle, WA 98122",2500 E Denny Way,Seattle,WA,98122,Apartment,1,1,1595,,47.619117,-122.299497
+"2501-E-Madison-St,-Seattle,-WA-98112","2501 E Madison St, Seattle, WA 98112",2501 E Madison St,Seattle,WA,98112,Apartment,2,2,2895,,47.620984,-122.299449
+"2501-Thorndyke-Ave-W,-Apt-103,-Seattle,-WA-98199","2501 Thorndyke Ave W, Apt 103, Seattle, WA 98199",2501 Thorndyke Ave W,Seattle,WA,98199,Apartment,3,3,2895,1200,47.641609,-122.385963
+"2510-Western-Ave,-Seattle,-WA-98121","2510 Western Ave, Seattle, WA 98121",2510 Western Ave,Seattle,WA,98121,Apartment,1,,1489,,47.614485,-122.349822
+"2515-4th-Ave,-Seattle,-WA-98121","2515 4th Ave, Seattle, WA 98121",2515 4th Ave,Seattle,WA,98121,Apartment,2,2,2800,916,47.616762,-122.346902
+"2517-13th-Ave-W,-Seattle,-WA-98119","2517 13th Ave W, Seattle, WA 98119",2517 13th Ave W,Seattle,WA,98119,Apartment,2,3,2595,,47.64128,-122.373967
+"2522-Dexter-Ave-N,-Apt-301,-Seattle,-WA-98109","2522 Dexter Ave N, Apt 301, Seattle, WA 98109",2522 Dexter Ave N,Seattle,WA,98109,Single Family,2,2,3295,1300,47.64303,-122.344858
+"2610-Nw-56th-St,-Seattle,-WA-98107","2610 Nw 56th St, Seattle, WA 98107",2610 Nw 56th St,Seattle,WA,98107,Apartment,1,2,1750,,47.66968,-122.39063
+"2612-E-Madison-St,-Seattle,-WA-98112","2612 E Madison St, Seattle, WA 98112",2612 E Madison St,Seattle,WA,98112,Apartment,1,1,1650,,47.62252,-122.29808
+"2641-42nd-Ave-SW,-Seattle,-WA-98116","2641 42nd Ave SW, Seattle, WA 98116",2641 42nd Ave SW,Seattle,WA,98116,Apartment,1,,1000,,47.57981,-122.38554
+"2655-14th-Ave-W,-Seattle,-WA-98119","2655 14th Ave W, Seattle, WA 98119",2655 14th Ave W,Seattle,WA,98119,Apartment,1,1,1495,,47.644476,-122.375246
+"2700-Ne-125th-St,-Seattle,-WA-98125","2700 Ne 125th St, Seattle, WA 98125",2700 Ne 125th St,Seattle,WA,98125,Apartment,1,1,1519,,47.719621,-122.298716
+"2714-S-King-St,-Seattle,-WA-98144","2714 S King St, Seattle, WA 98144",2714 S King St,Seattle,WA,98144,Apartment,2,3,2250,,47.598296,-122.296794
+"2718-S-King-St,-Seattle,-WA-98144","2718 S King St, Seattle, WA 98144",2718 S King St,Seattle,WA,98144,Apartment,1,1,1380,,47.598294,-122.296633
+"2720-4th-Ave,-Seattle,-WA-98121","2720 4th Ave, Seattle, WA 98121",2720 4th Ave,Seattle,WA,98121,Apartment,1,2,2994,934,47.618333,-122.348372
+"2727-Ne-125th-St,-Seattle,-WA-98125","2727 Ne 125th St, Seattle, WA 98125",2727 Ne 125th St,Seattle,WA,98125,Apartment,1,2,1695,,47.718858,-122.298248
+"2727-Ne-55th-St,-Seattle,-WA-98105","2727 Ne 55th St, Seattle, WA 98105",2727 Ne 55th St,Seattle,WA,98105,Apartment,1,2,1550,,47.668343,-122.297024
+"2800-Nw-69th-St,-Seattle,-WA-98117","2800 Nw 69th St, Seattle, WA 98117",2800 Nw 69th St,Seattle,WA,98117,Single Family,1,3,2995,1960,47.678966,-122.39324
+"2801-Western-Ave,-Seattle,-WA-98121","2801 Western Ave, Seattle, WA 98121",2801 Western Ave,Seattle,WA,98121,Apartment,,,1989,,47.615632,-122.353306
+"2820-Eastlake-Ave-E,-Seattle,-WA-98102","2820 Eastlake Ave E, Seattle, WA 98102",2820 Eastlake Ave E,Seattle,WA,98102,Apartment,1,0,945,,47.646145,-122.325053
+"2821-14th-Ave-W,-Seattle,-WA-98119","2821 14th Ave W, Seattle, WA 98119",2821 14th Ave W,Seattle,WA,98119,Apartment,1,1,1350,,47.64548,-122.375249
+"2834-15th-Ave-W,-Seattle,-WA-98119","2834 15th Ave W, Seattle, WA 98119",2834 15th Ave W,Seattle,WA,98119,Apartment,1,2,2095,,47.645958,-122.37579
+"285-8th-Ave-N,-Seattle,-WA-98109","285 8th Ave N, Seattle, WA 98109",285 8th Ave N,Seattle,WA,98109,Apartment,1,1,2050,829,47.620712,-122.341454
+"2851-Eastlake-Ave-E,-Seattle,-WA-98102","2851 Eastlake Ave E, Seattle, WA 98102",2851 Eastlake Ave E,Seattle,WA,98102,Apartment,,,1372,,47.646623,-122.325532
+"2900-1st-Ave,-Seattle,-WA-98121","2900 1st Ave, Seattle, WA 98121",2900 1st Ave,Seattle,WA,98121,Apartment,1,,2305,,47.617517,-122.352919
+"2909-S-Plum-St,-Seattle,-WA-98144","2909 S Plum St, Seattle, WA 98144",2909 S Plum St,Seattle,WA,98144,Single Family,3,3,4295,2850,47.585246,-122.294561
+"2922-Western-Ave,-Seattle,-WA-98121","2922 Western Ave, Seattle, WA 98121",2922 Western Ave,Seattle,WA,98121,Apartment,,,1815,,47.616786,-122.353701
+"300-11th-Ave,-Seattle,-WA-98122","300 11th Ave, Seattle, WA 98122",300 11th Ave,Seattle,WA,98122,Apartment,2,2,1795,,47.604572,-122.317733
+"3002-S-208th-St,-Seattle,-WA-98198","3002 S 208th St, Seattle, WA 98198",3002 S 208th St,Seattle,WA,98198,Apartment,1,2,1684,825,47.416471,-122.294458
+"301-26th-Ave-S,-Seattle,-WA-98144","301 26th Ave S, Seattle, WA 98144",301 26th Ave S,Seattle,WA,98144,Apartment,1,2,1695,,47.600161,-122.299008
+"301-Minor-Ave-N,-Seattle,-WA-98109","301 Minor Ave N, Seattle, WA 98109",301 Minor Ave N,Seattle,WA,98109,Apartment,2,2,2510,940,47.621315,-122.33335
+"301-N-104th-St,-Seattle,-WA-98133","301 N 104th St, Seattle, WA 98133",301 N 104th St,Seattle,WA,98133,Apartment,1,1,1550,,47.704243,-122.355034
+"3017-60th-Ave-SW,-Seattle,-WA-98116","3017 60th Ave SW, Seattle, WA 98116",3017 60th Ave SW,Seattle,WA,98116,Apartment,1,1,2150,,47.577155,-122.409776
+"3021-Sw-Bradford-St,-Seattle,-WA-98126","3021 Sw Bradford St, Seattle, WA 98126",3021 Sw Bradford St,Seattle,WA,98126,Apartment,1,1,1450,,47.568727,-122.371801
+"3025-Ne-130th-St,-Seattle,-WA-98125","3025 Ne 130th St, Seattle, WA 98125",3025 Ne 130th St,Seattle,WA,98125,Apartment,2,1,2925,,47.722401,-122.295158
+"3025-Ne-137th-St,-Seattle,-WA-98125","3025 Ne 137th St, Seattle, WA 98125",3025 Ne 137th St,Seattle,WA,98125,Apartment,,2,1495,,47.727428,-122.295359
+"3030-Ne-143rd-St,-Seattle,-WA-98125","3030 Ne 143rd St, Seattle, WA 98125",3030 Ne 143rd St,Seattle,WA,98125,Apartment,1,,1645,,47.732285,-122.29487
+"3032-Ne-140th-St,-Seattle,-WA-98125","3032 Ne 140th St, Seattle, WA 98125",3032 Ne 140th St,Seattle,WA,98125,Apartment,1,1,1595,,47.730388,-122.294847
+"3036-16th-Ave-W,-Seattle,-WA-98119","3036 16th Ave W, Seattle, WA 98119",3036 16th Ave W,Seattle,WA,98119,Apartment,1,1,1928,,47.647714,-122.377118
+"3040-17th-Ave-W,-Seattle,-WA-98119","3040 17th Ave W, Seattle, WA 98119",3040 17th Ave W,Seattle,WA,98119,Apartment,,,1106,,47.64784,-122.378033
+"3040-Nw-Market-St,-Seattle,-WA-98107","3040 Nw Market St, Seattle, WA 98107",3040 Nw Market St,Seattle,WA,98107,Apartment,1,,2885,,47.668889,-122.39777
+"306-Blanchard-St,-Seattle,-WA-98121","306 Blanchard St, Seattle, WA 98121",306 Blanchard St,Seattle,WA,98121,Apartment,1,1,1505,676,47.614308,-122.343513
+"307-N-45th-St,-Seattle,-WA-98103","307 N 45th St, Seattle, WA 98103",307 N 45th St,Seattle,WA,98103,Apartment,1,0,1550,,47.6614,-122.355046
+"308-4th-Ave-S,-Seattle,-WA-98104","308 4th Ave S, Seattle, WA 98104",308 4th Ave S,Seattle,WA,98104,Apartment,1,,1162,,47.599834,-122.328636
+"3104-S-Day-St,-Seattle,-WA-98144","3104 S Day St, Seattle, WA 98144",3104 S Day St,Seattle,WA,98144,Apartment,1,1,1950,,47.590317,-122.292038
+"311-6th-Ave-S,-Seattle,-WA-98104","311 6th Ave S, Seattle, WA 98104",311 6th Ave S,Seattle,WA,98104,Apartment,1,0,1195,,47.599509,-122.326635
+"311-Cedar-St,-Seattle,-WA-98121","311 Cedar St, Seattle, WA 98121",311 Cedar St,Seattle,WA,98121,Condo,1,1,4338,650,47.617218,-122.348434
+"3119-Ne-120th-St,-Seattle,-WA-98125","3119 Ne 120th St, Seattle, WA 98125",3119 Ne 120th St,Seattle,WA,98125,Apartment,1,1,1395,,47.715395,-122.294408
+"312-11th-Ave,-Seattle,-WA-98122","312 11th Ave, Seattle, WA 98122",312 11th Ave,Seattle,WA,98122,Apartment,1,1,1450,,47.604819,-122.31773
+"312-2nd-Ave-W,-Seattle,-WA-98119","312 2nd Ave W, Seattle, WA 98119",312 2nd Ave W,Seattle,WA,98119,Apartment,,,1617,,47.621533,-122.358972
+"312-Harvard-Ave-E,-Seattle,-WA-98102","312 Harvard Ave E, Seattle, WA 98102",312 Harvard Ave E,Seattle,WA,98102,Apartment,1,1,2095,,47.621477,-122.321702
+"315-10th-Ave,-Seattle,-WA-98122","315 10th Ave, Seattle, WA 98122",315 10th Ave,Seattle,WA,98122,Apartment,1,0,700,,47.604823,-122.319779
+"315-1st-Ave-N,-Seattle,-WA-98109","315 1st Ave N, Seattle, WA 98109",315 1st Ave N,Seattle,WA,98109,Apartment,,,2250,,47.621521,-122.355802
+"316-E-Harrison-St,-Seattle,-WA-98102","316 E Harrison St, Seattle, WA 98102",316 E Harrison St,Seattle,WA,98102,Apartment,1,1,1795,,47.622146,-122.326951
+"317-Nw-41st-St,-Seattle,-WA-98107","317 Nw 41st St, Seattle, WA 98107",317 Nw 41st St,Seattle,WA,98107,Apartment,1,1,1695,,47.656667,-122.361746
+"318-Boylston-Ave-E,-Seattle,-WA-98102","318 Boylston Ave E, Seattle, WA 98102",318 Boylston Ave E,Seattle,WA,98102,Apartment,1,1,1500,,47.621691,-122.322758
+"320-E-Pine-St,-Seattle,-WA-98122","320 E Pine St, Seattle, WA 98122",320 E Pine St,Seattle,WA,98122,Apartment,1,0,2097,,47.615797,-122.327143
+"320-Valley-St,-Seattle,-WA-98109","320 Valley St, Seattle, WA 98109",320 Valley St,Seattle,WA,98109,Apartment,1,1,1375,,47.626514,-122.350599
+"3200-16th-Ave-W,-Seattle,-WA-98119","3200 16th Ave W, Seattle, WA 98119",3200 16th Ave W,Seattle,WA,98119,Apartment,1,1,1895,,47.650411,-122.377521
+"3200-Ne-140th-St,-Seattle,-WA-98125","3200 Ne 140th St, Seattle, WA 98125",3200 Ne 140th St,Seattle,WA,98125,Apartment,1,2,1650,,47.730378,-122.293501
+"3200-S-176th-St,-Seattle,-WA-98188","3200 S 176th St, Seattle, WA 98188",3200 S 176th St,Seattle,WA,98188,Apartment,2,2,1825,1250,47.445729,-122.291077
+"3201-21st-Ave-W,-Seattle,-WA-98199","3201 21st Ave W, Seattle, WA 98199",3201 21st Ave W,Seattle,WA,98199,Apartment,1,2,1695,,47.648661,-122.383624
+"3207-21st-Ave-W,-Seattle,-WA-98199","3207 21st Ave W, Seattle, WA 98199",3207 21st Ave W,Seattle,WA,98199,Apartment,2,2,2295,,47.648809,-122.383737
+"321-10th-Ave,-Apt-524,-Seattle,-WA-98122","321 10th Ave, Apt 524, Seattle, WA 98122",321 10th Ave,Seattle,WA,98122,Apartment,1,1,1355,600,47.604985,-122.319794
+"3215-Ne-143rd-St,-Seattle,-WA-98125","3215 Ne 143rd St, Seattle, WA 98125",3215 Ne 143rd St,Seattle,WA,98125,Apartment,2,2,2087,,47.731714,-122.293309
+"3220-California-Ave-SW,-Seattle,-WA-98116","3220 California Ave SW, Seattle, WA 98116",3220 California Ave SW,Seattle,WA,98116,Apartment,1,0,1860,,47.574891,-122.386397
+"323-W-Republican-St,-Seattle,-WA-98119","323 W Republican St, Seattle, WA 98119",323 W Republican St,Seattle,WA,98119,Single Family,1,1,1750,,47.62304,-122.36169
+"3230-16th-Ave-W,-Seattle,-WA-98119","3230 16th Ave W, Seattle, WA 98119",3230 16th Ave W,Seattle,WA,98119,Apartment,,,1874,,47.64977,-122.377131
+"3233-Sw-Avalon-Way,-Seattle,-WA-98126","3233 Sw Avalon Way, Seattle, WA 98126",3233 Sw Avalon Way,Seattle,WA,98126,Apartment,1,1,1750,,47.563804,-122.373498
+"3262-California-Ave-SW,-Seattle,-WA-98116","3262 California Ave SW, Seattle, WA 98116",3262 California Ave SW,Seattle,WA,98116,Single Family,1,1,1695,,47.573817,-122.386398
+"330-3rd-Ave-W,-Seattle,-WA-98119","330 3rd Ave W, Seattle, WA 98119",330 3rd Ave W,Seattle,WA,98119,Apartment,1,1,1950,760,47.62138,-122.3603
+"3309-Beacon-Ave-S,-Seattle,-WA-98144","3309 Beacon Ave S, Seattle, WA 98144",3309 Beacon Ave S,Seattle,WA,98144,Apartment,1,0,1335,,47.573711,-122.309189
+"337-Ne-103rd-St,-Seattle,-WA-98125","337 Ne 103rd St, Seattle, WA 98125",337 Ne 103rd St,Seattle,WA,98125,Apartment,1,,2100,,47.70219,-122.325
+"3430-Rainier-Ave-S,-Seattle,-WA-98144","3430 Rainier Ave S, Seattle, WA 98144",3430 Rainier Ave S,Seattle,WA,98144,Apartment,1,1,1400,,47.572167,-122.292978
+"3438-14th-Ave-W,-Seattle,-WA-98119","3438 14th Ave W, Seattle, WA 98119",3438 14th Ave W,Seattle,WA,98119,Apartment,1,1,1495,,47.651463,-122.37452
+"3453-21st-Ave-W,-Seattle,-WA-98199","3453 21st Ave W, Seattle, WA 98199",3453 21st Ave W,Seattle,WA,98199,Townhouse,2.5,3,3800,1400,47.651826,-122.383627
+"3490-Sw-Graham-St,-Seattle,-WA-98126","3490 Sw Graham St, Seattle, WA 98126",3490 Sw Graham St,Seattle,WA,98126,Apartment,,,1855,,47.54681,-122.3756
+"35th-Avenue-Lk-NE,---City,-Seattle,-WA-98125","35th Avenue Lk NE, # City, Seattle, WA 98125",35th Avenue Lk NE,Seattle,WA,98125,Apartment,1,1,1245,,47.717321,-122.291354
+"3520-27th-Pl-W,-Seattle,-WA-98199","3520 27th Pl W, Seattle, WA 98199",3520 27th Pl W,Seattle,WA,98199,Apartment,,,2013,,47.65261,-122.39029
+"3535-27th-Pl-W,-Seattle,-WA-98199","3535 27th Pl W, Seattle, WA 98199",3535 27th Pl W,Seattle,WA,98199,Apartment,1,1,2095,,47.652,-122.390186
+"3627-Stone-Way-N,-Seattle,-WA-98103","3627 Stone Way N, Seattle, WA 98103",3627 Stone Way N,Seattle,WA,98103,Apartment,1,1,2355,715,47.651962,-122.343067
+"3630-22nd-Ave-W,-Seattle,-WA-98199","3630 22nd Ave W, Seattle, WA 98199",3630 22nd Ave W,Seattle,WA,98199,Apartment,1,1,1495,,47.653214,-122.384406
+"3636-Dayton-Ave-N,-Seattle,-WA-98103","3636 Dayton Ave N, Seattle, WA 98103",3636 Dayton Ave N,Seattle,WA,98103,Apartment,1,1,1695,,47.652823,-122.352029
+"3636-Stone-Way-N,-Seattle,-WA-98103","3636 Stone Way N, Seattle, WA 98103",3636 Stone Way N,Seattle,WA,98103,Apartment,1,1,1894,,47.651649,-122.342218
+"3637-Courtland-Pl-S,---A,-Seattle,-WA-98144","3637 Courtland Pl S, # A, Seattle, WA 98144",3637 Courtland Pl S,Seattle,WA,98144,Single Family,3,3,2895,1500,47.570426,-122.287403
+"3645-Whitman-Ave-N,-Seattle,-WA-98103","3645 Whitman Ave N, Seattle, WA 98103",3645 Whitman Ave N,Seattle,WA,98103,Apartment,1,1,1595,,47.651975,-122.346343
+"3701-S-Hudson-St,-Seattle,-WA-98118","3701 S Hudson St, Seattle, WA 98118",3701 S Hudson St,Seattle,WA,98118,Apartment,1,1,1930,,47.556626,-122.285721
+"3702-S-Hudson-St,-Seattle,-WA-98118","3702 S Hudson St, Seattle, WA 98118",3702 S Hudson St,Seattle,WA,98118,Apartment,1,0,1400,,47.557243,-122.285864
+"3721-27th-Pl-W,-Seattle,-WA-98199","3721 27th Pl W, Seattle, WA 98199",3721 27th Pl W,Seattle,WA,98199,Apartment,2,2,2249,,47.653901,-122.391966
+"3801-Stone-Way-N,-Seattle,-WA-98103","3801 Stone Way N, Seattle, WA 98103",3801 Stone Way N,Seattle,WA,98103,Apartment,,,2571,,47.652975,-122.343036
+"3821-Ne-45th-St,-Seattle,-WA-98105","3821 Ne 45th St, Seattle, WA 98105",3821 Ne 45th St,Seattle,WA,98105,Apartment,1,2,1595,,47.66098,-122.286156
+"3926-1st-Ave-NE,-Apt-12,-Seattle,-WA-98105","3926 1st Ave NE, Apt 12, Seattle, WA 98105",3926 1st Ave NE,Seattle,WA,98105,Single Family,1,,1495,540,47.654588,-122.327567
+"400-Boren-Ave-N,-Seattle,-WA-98109","400 Boren Ave N, Seattle, WA 98109",400 Boren Ave N,Seattle,WA,98109,Apartment,2,2,4660,979,47.622203,-122.335471
+"400-S-Jackson-St,-Seattle,-WA-98104","400 S Jackson St, Seattle, WA 98104",400 S Jackson St,Seattle,WA,98104,Apartment,1,1,1861,,47.599513,-122.328431
+"400-Wall-St,-Seattle,-WA-98121","400 Wall St, Seattle, WA 98121",400 Wall St,Seattle,WA,98121,Apartment,2,2,2095,,47.61717,-122.346376
+"401-E-Mercer-St,-Seattle,-WA-98102","401 E Mercer St, Seattle, WA 98102",401 E Mercer St,Seattle,WA,98102,Apartment,1,1,1295,,47.624081,-122.326293
+"401-Harvard-Ave-E,-Seattle,-WA-98102","401 Harvard Ave E, Seattle, WA 98102",401 Harvard Ave E,Seattle,WA,98102,Apartment,2,2,2400,,47.622158,-122.322346
+"402-22nd-Ave-S,-Seattle,-WA-98144","402 22nd Ave S, Seattle, WA 98144",402 22nd Ave S,Seattle,WA,98144,Apartment,,,1799,,47.599053,-122.302961
+"4032-Stone-Way-N,-Seattle,-WA-98103","4032 Stone Way N, Seattle, WA 98103",4032 Stone Way N,Seattle,WA,98103,Apartment,1,0,2835,,47.656383,-122.342041
+"404-E-Howell-St,-Seattle,-WA-98122","404 E Howell St, Seattle, WA 98122",404 E Howell St,Seattle,WA,98122,Apartment,1,1,1275,,47.617783,-122.326434
+"4040-26th-Ave-SW,-Seattle,-WA-98106","4040 26th Ave SW, Seattle, WA 98106",4040 26th Ave SW,Seattle,WA,98106,Apartment,1,1,1682,,47.567029,-122.364934
+"4041-Roosevelt-Way-NE,-Seattle,-WA-98105","4041 Roosevelt Way NE, Seattle, WA 98105",4041 Roosevelt Way NE,Seattle,WA,98105,Apartment,1,1,2360,,47.656629,-122.318306
+"406-Ne-80th-St,-Seattle,-WA-98115","406 Ne 80th St, Seattle, WA 98115",406 Ne 80th St,Seattle,WA,98115,Apartment,1,2,1650,,47.687021,-122.323917
+"409-Eastlake-Ave-E,-Seattle,-WA-98109","409 Eastlake Ave E, Seattle, WA 98109",409 Eastlake Ave E,Seattle,WA,98109,Apartment,1,1,1695,,47.622303,-122.329516
+"4100-Sw-Edmunds-St,-Seattle,-WA-98116","4100 Sw Edmunds St, Seattle, WA 98116",4100 Sw Edmunds St,Seattle,WA,98116,Apartment,,,1999,,47.56021,-122.38442
+"411-Bellevue-Ave-E,-Seattle,-WA-98102","411 Bellevue Ave E, Seattle, WA 98102",411 Bellevue Ave E,Seattle,WA,98102,Apartment,1,1,2095,,47.622311,-122.326952
+"411-Harvard-Ave-E,-Seattle,-WA-98102","411 Harvard Ave E, Seattle, WA 98102",411 Harvard Ave E,Seattle,WA,98102,Apartment,1,1,2150,,47.622321,-122.322343
+"411-W-Republican-St,-Seattle,-WA-98119","411 W Republican St, Seattle, WA 98119",411 W Republican St,Seattle,WA,98119,Apartment,1,2,1595,,47.623043,-122.362323
+"4110-12th-Ave-NE,-Seattle,-WA-98105","4110 12th Ave NE, Seattle, WA 98105",4110 12th Ave NE,Seattle,WA,98105,Apartment,1,0,1425,,47.65727,-122.315218
+"412-Bellevue-Ave-E,-Seattle,-WA-98102","412 Bellevue Ave E, Seattle, WA 98102",412 Bellevue Ave E,Seattle,WA,98102,Apartment,1,1,1795,,47.622477,-122.326224
+"412-N-45th-St,-Apt-103,-Seattle,-WA-98103","412 N 45th St, Apt 103, Seattle, WA 98103",412 N 45th St,Seattle,WA,98103,Apartment,1,1,1450,650,47.661617,-122.353385
+"4120-Burke-Ave-N,-Seattle,-WA-98103","4120 Burke Ave N, Seattle, WA 98103",4120 Burke Ave N,Seattle,WA,98103,Apartment,1,0,1250,,47.657459,-122.334629
+"4122-36th-Ave-SW,-Seattle,-WA-98126","4122 36th Ave SW, Seattle, WA 98126",4122 36th Ave SW,Seattle,WA,98126,Apartment,1,0,1125,,47.565734,-122.377052
+"4143-22nd-Ave-SW,-Seattle,-WA-98106","4143 22nd Ave SW, Seattle, WA 98106",4143 22nd Ave SW,Seattle,WA,98106,Single Family,1,3,2995,1150,47.565293,-122.361551
+"415-Boren-Ave,-Seattle,-WA-98104","415 Boren Ave, Seattle, WA 98104",415 Boren Ave,Seattle,WA,98104,Apartment,,,1455,,47.605279,-122.321872
+"420-Vine-St,-Seattle,-WA-98121","420 Vine St, Seattle, WA 98121",420 Vine St,Seattle,WA,98121,Apartment,1,0,1250,,47.617844,-122.346747
+"4200-S-Othello-St,-Seattle,-WA-98118","4200 S Othello St, Seattle, WA 98118",4200 S Othello St,Seattle,WA,98118,Apartment,,,1437,,47.537582,-122.280106
+"4203-Brooklyn-Ave-NE,-Seattle,-WA-98105","4203 Brooklyn Ave NE, Seattle, WA 98105",4203 Brooklyn Ave NE,Seattle,WA,98105,Apartment,1,0,1350,,47.658525,-122.314709
+"4208-Beach-Dr-SW,-Seattle,-WA-98116","4208 Beach Dr SW, Seattle, WA 98116",4208 Beach Dr SW,Seattle,WA,98116,Apartment,2,2,2995,,47.565768,-122.407524
+"4210-Brooklyn-Ave-NE,-Seattle,-WA-98105","4210 Brooklyn Ave NE, Seattle, WA 98105",4210 Brooklyn Ave NE,Seattle,WA,98105,Apartment,1,2,2400,760,47.658736,-122.314002
+"4214-11th-Ave-NE,-Seattle,-WA-98105","4214 11th Ave NE, Seattle, WA 98105",4214 11th Ave NE,Seattle,WA,98105,Apartment,1,0,1245,,47.658928,-122.31631
+"4216-7th-Ave-Ne-Unit-A,-Seattle,-WA-98105","4216 7th Ave Ne Unit A, Seattle, WA 98105",4216 7th Ave Ne Unit A,Seattle,WA,98105,Apartment,2.5,3,2900,1600,47.658004,-122.320418
+"4218-Roosevelt-Way-NE,-Seattle,-WA-98105","4218 Roosevelt Way NE, Seattle, WA 98105",4218 Roosevelt Way NE,Seattle,WA,98105,Apartment,1,0,1700,,47.659019,-122.317467
+"4219-7th-Ave-NE,-Seattle,-WA-98105","4219 7th Ave NE, Seattle, WA 98105",4219 7th Ave NE,Seattle,WA,98105,Apartment,1,1,1350,,47.658083,-122.321168
+"4219-S-Othello-St,-Seattle,-WA-98118","4219 S Othello St, Seattle, WA 98118",4219 S Othello St,Seattle,WA,98118,Apartment,,,1596,,47.536548,-122.28001
+"422-Summit-Ave-E,-Seattle,-WA-98102","422 Summit Ave E, Seattle, WA 98102",422 Summit Ave E,Seattle,WA,98102,Apartment,1,1,1400,,47.622645,-122.324944
+"422-Yale-Ave-N,-Seattle,-WA-98109","422 Yale Ave N, Seattle, WA 98109",422 Yale Ave N,Seattle,WA,98109,Apartment,1,2,1943,,47.622466,-122.330067
+"4225-11th-Ave-NE,-Seattle,-WA-98105","4225 11th Ave NE, Seattle, WA 98105",4225 11th Ave NE,Seattle,WA,98105,Apartment,1,1,1550,,47.659045,-122.316969
+"4225-9th-Ave-NE,-Seattle,-WA-98105","4225 9th Ave NE, Seattle, WA 98105",4225 9th Ave NE,Seattle,WA,98105,Apartment,1,2,1895,,47.65831,-122.319076
+"423-Terry-Ave,-Seattle,-WA-98104","423 Terry Ave, Seattle, WA 98104",423 Terry Ave,Seattle,WA,98104,Apartment,1,0,999,,47.605001,-122.323153
+"4235-4239-27th-Ave-W,-Seattle,-WA-98199","4235-4239 27th Ave W, Seattle, WA 98199",4235-4239 27th Ave W,Seattle,WA,98199,Apartment,1,1,1195,550,47.658791,-122.391363
+"4235-Brooklyn-Ave-NE,-Apt-201,-Seattle,-WA-98105","4235 Brooklyn Ave NE, Apt 201, Seattle, WA 98105",4235 Brooklyn Ave NE,Seattle,WA,98105,Single Family,1,0,1300,544,47.659402,-122.314686
+"424-19th-Ave-E,-Seattle,-WA-98112","424 19th Ave E, Seattle, WA 98112",424 19th Ave E,Seattle,WA,98112,Apartment,1,1,1895,,47.622977,-122.306985
+"4245-27th-Ave-W,-Apt-5,-Seattle,-WA-98199","4245 27th Ave W, Apt 5, Seattle, WA 98199",4245 27th Ave W,Seattle,WA,98199,Apartment,1,3,2695,1050,47.658943,-122.39135
+"429-2nd-Ave-W,-Seattle,-WA-98119","429 2nd Ave W, Seattle, WA 98119",429 2nd Ave W,Seattle,WA,98119,Apartment,2,2,3050,951,47.623123,-122.359718
+"4301-Woodland-Park-Ave-N,-Seattle,-WA-98103","4301 Woodland Park Ave N, Seattle, WA 98103",4301 Woodland Park Ave N,Seattle,WA,98103,Apartment,1,1,1725,,47.659727,-122.344902
+"431-Nw-100th-Pl,-Seattle,-WA-98177","431 Nw 100th Pl, Seattle, WA 98177",431 Nw 100th Pl,Seattle,WA,98177,Apartment,1,1,1600,,47.702369,-122.362749
+"4311-Dayton-Ave-N,-Apt-3,-Seattle,-WA-98103","4311 Dayton Ave N, Apt 3, Seattle, WA 98103",4311 Dayton Ave N,Seattle,WA,98103,Apartment,1,3,2755,815,47.659378,-122.352379
+"4311-Sw-Portland-St,-Seattle,-WA-98136","4311 Sw Portland St, Seattle, WA 98136",4311 Sw Portland St,Seattle,WA,98136,Single Family,2,3,3495,2300,47.532734,-122.387944
+"4315-7th-Ave-NE,-Seattle,-WA-98105","4315 7th Ave NE, Seattle, WA 98105",4315 7th Ave NE,Seattle,WA,98105,Apartment,1,0,865,,47.659915,-122.321039
+"4337-15th-Ave-NE,-Seattle,-WA-98105","4337 15th Ave NE, Seattle, WA 98105",4337 15th Ave NE,Seattle,WA,98105,Apartment,1,1,1600,,47.6608,-122.312336
+"4351-15th-Ave-S,-Seattle,-WA-98108","4351 15th Ave S, Seattle, WA 98108",4351 15th Ave S,Seattle,WA,98108,Apartment,1,1,1850,,47.563751,-122.313914
+"4420-Sw-Admiral-Way,-Apt-204,-Seattle,-WA-98116","4420 Sw Admiral Way, Apt 204, Seattle, WA 98116",4420 Sw Admiral Way,Seattle,WA,98116,Apartment,1,1,1350,600,47.581426,-122.388815
+"4427-5th-Ave-NE,-Seattle,-WA-98105","4427 5th Ave NE, Seattle, WA 98105",4427 5th Ave NE,Seattle,WA,98105,Apartment,1,1,1650,665,47.661095,-122.323257
+"4435-35th-Ave-SW,-Seattle,-WA-98126","4435 35th Ave SW, Seattle, WA 98126",4435 35th Ave SW,Seattle,WA,98126,Apartment,,,1498,,47.56357,-122.37652
+"4455-Interlake-Ave-N,-Seattle,-WA-98103","4455 Interlake Ave N, Seattle, WA 98103",4455 Interlake Ave N,Seattle,WA,98103,Apartment,1,0,1790,,47.661049,-122.340889
+"4502-42nd-Ave-SW,-Seattle,-WA-98116","4502 42nd Ave SW, Seattle, WA 98116",4502 42nd Ave SW,Seattle,WA,98116,Apartment,,,1645,,47.562724,-122.385065
+"4514-8th-Ave-NE,-Seattle,-WA-98105","4514 8th Ave NE, Seattle, WA 98105",4514 8th Ave NE,Seattle,WA,98105,Apartment,1,1,1350,,47.661851,-122.319233
+"4517-Glenn-Way-SW,-Seattle,-WA-98116","4517 Glenn Way SW, Seattle, WA 98116",4517 Glenn Way SW,Seattle,WA,98116,Apartment,1,2,2000,,47.562074,-122.389148
+"4516-Union-Bay-Pl-NE,-Seattle,-WA-98105","4516 Union Bay Pl NE, Seattle, WA 98105",4516 Union Bay Pl NE,Seattle,WA,98105,Apartment,1,1,1695,,47.662,-122.292946
+"4528-44th-Ave-SW,-Seattle,-WA-98116","4528 44th Ave SW, Seattle, WA 98116",4528 44th Ave SW,Seattle,WA,98116,Apartment,1,0,1425,,47.562041,-122.387731
+"4536-20th-Ave-NE,-Seattle,-WA-98105","4536 20th Ave NE, Seattle, WA 98105",4536 20th Ave NE,Seattle,WA,98105,Apartment,1,0,1375,,47.66244,-122.30623
+"4545-8th-Ave-NE,-Seattle,-WA-98105","4545 8th Ave NE, Seattle, WA 98105",4545 8th Ave NE,Seattle,WA,98105,Apartment,1,,1758,,47.662231,-122.319891
+"4548-20th-Ave-NE,-Seattle,-WA-98105","4548 20th Ave NE, Seattle, WA 98105",4548 20th Ave NE,Seattle,WA,98105,Single Family,1,0,900,,47.662658,-122.306197
+"4548-Delridge-Way-SW,-Seattle,-WA-98106","4548 Delridge Way SW, Seattle, WA 98106",4548 Delridge Way SW,Seattle,WA,98106,Apartment,1,0,995,,47.56152,-122.362566
+"4555-39th-Ave-SW,-Seattle,-WA-98116","4555 39th Ave SW, Seattle, WA 98116",4555 39th Ave SW,Seattle,WA,98116,Apartment,1,1,1774,,47.56137,-122.38232
+"4618-Fremont-Ave-N,-Seattle,-WA-98103","4618 Fremont Ave N, Seattle, WA 98103",4618 Fremont Ave N,Seattle,WA,98103,Apartment,1,0,1300,,47.662697,-122.349686
+"4710-20th-Ave-NE,-Seattle,-WA-98105","4710 20th Ave NE, Seattle, WA 98105",4710 20th Ave NE,Seattle,WA,98105,Single Family,1,0,1325,350,47.663508,-122.306194
+"4710-University-Way-NE,-Seattle,-WA-98105","4710 University Way NE, Seattle, WA 98105",4710 University Way NE,Seattle,WA,98105,Apartment,1,0,1329,,47.663369,-122.312767
+"4715-42nd-Ave-SW,-Seattle,-WA-98116","4715 42nd Ave SW, Seattle, WA 98116",4715 42nd Ave SW,Seattle,WA,98116,Apartment,1,1,1811,,47.560622,-122.385861
+"4725-35th-Ave-Sw-Unit-B,-Seattle,-WA-98126","4725 35th Ave Sw Unit B, Seattle, WA 98126",4725 35th Ave Sw Unit B,Seattle,WA,98126,Multi-Family,1,2,2095,800,47.560215,-122.376596
+"4726-11th-Ave-NE,-Seattle,-WA-98105","4726 11th Ave NE, Seattle, WA 98105",4726 11th Ave NE,Seattle,WA,98105,Apartment,2,2,2725,,47.66391,-122.316023
+"4730-California-Ave-SW,-Seattle,-WA-98116","4730 California Ave SW, Seattle, WA 98116",4730 California Ave SW,Seattle,WA,98116,Apartment,1,1,1876,567,47.560124,-122.386415
+"4730-University-Way-NE,-Seattle,-WA-98105","4730 University Way NE, Seattle, WA 98105",4730 University Way NE,Seattle,WA,98105,Apartment,1,1,1559,,47.663862,-122.312765
+"4733-17th-Ave-NE,-Seattle,-WA-98105","4733 17th Ave NE, Seattle, WA 98105",4733 17th Ave NE,Seattle,WA,98105,Apartment,1,1,1295,,47.663987,-122.31
+"4740-32nd-Ave-S,-Seattle,-WA-98118","4740 32nd Ave S, Seattle, WA 98118",4740 32nd Ave S,Seattle,WA,98118,Apartment,2,2,2180,1098,47.559618,-122.290443
+"4745-16th-Ave-NE,-Seattle,-WA-98105","4745 16th Ave NE, Seattle, WA 98105",4745 16th Ave NE,Seattle,WA,98105,Apartment,1,2,2295,,47.66434,-122.310804
+"4751-12th-Ave-NE,-Seattle,-WA-98105","4751 12th Ave NE, Seattle, WA 98105",4751 12th Ave NE,Seattle,WA,98105,Apartment,1,2,2950,1021,47.664427,-122.31556
+"4754-Fauntleroy-Way-SW,-Seattle,-WA-98116","4754 Fauntleroy Way SW, Seattle, WA 98116",4754 Fauntleroy Way SW,Seattle,WA,98116,Apartment,,,1955,,47.559521,-122.381073
+"4801-Rainier-Ave-S,-Seattle,-WA-98118","4801 Rainier Ave S, Seattle, WA 98118",4801 Rainier Ave S,Seattle,WA,98118,Apartment,2,2,2015,,47.559143,-122.286748
+"4830-Fauntleroy-Way-SW,-Seattle,-WA-98116","4830 Fauntleroy Way SW, Seattle, WA 98116",4830 Fauntleroy Way SW,Seattle,WA,98116,Apartment,1,1,1695,,47.558283,-122.381052
+"50-University-St,-Seattle,-WA-98101","50 University St, Seattle, WA 98101",50 University St,Seattle,WA,98101,Apartment,2,2,3741,943,47.606443,-122.33985
+"500-13th-Ave-E,-Seattle,-WA-98102","500 13th Ave E, Seattle, WA 98102",500 13th Ave E,Seattle,WA,98102,Apartment,1,0,1099,,47.623438,-122.315377
+"500-W-Mercer-St,-Seattle,-WA-98119","500 W Mercer St, Seattle, WA 98119",500 W Mercer St,Seattle,WA,98119,Apartment,1,2,2400,,47.624843,-122.363606
+"500-Wall-St,-Seattle,-WA-98121","500 Wall St, Seattle, WA 98121",500 Wall St,Seattle,WA,98121,Apartment,1,1,1740,,47.617965,-122.345349
+"5008-B-11th-Ave-NE,-Seattle,-WA-98105","5008 B 11th Ave NE, Seattle, WA 98105",5008 B 11th Ave NE,Seattle,WA,98105,Single Family,2.5,3,2850,1310,47.66526,-122.316093
+"501-Summit-Ave-E,-Seattle,-WA-98102","501 Summit Ave E, Seattle, WA 98102",501 Summit Ave E,Seattle,WA,98102,Apartment,1,1,1995,,47.623383,-122.325678
+"5017-15th-Ave-NE,-Seattle,-WA-98105","5017 15th Ave NE, Seattle, WA 98105",5017 15th Ave NE,Seattle,WA,98105,Apartment,1,0,1175,,47.665526,-122.312259
+"503-E-Thomas-St,-Seattle,-WA-98102","503 E Thomas St, Seattle, WA 98102",503 E Thomas St,Seattle,WA,98102,Apartment,1,0,1295,,47.62067,-122.324934
+"504-E-Denny-Way,-Seattle,-WA-98122","504 E Denny Way, Seattle, WA 98122",504 E Denny Way,Seattle,WA,98122,Apartment,1,0,1250,,47.618677,-122.324922
+"5043-Brooklyn-Ave-NE,-Seattle,-WA-98105","5043 Brooklyn Ave NE, Seattle, WA 98105",5043 Brooklyn Ave NE,Seattle,WA,98105,Apartment,1,0,900,,47.666156,-122.314484
+"505-Boylston-Ave-E,-Seattle,-WA-98102","505 Boylston Ave E, Seattle, WA 98102",505 Boylston Ave E,Seattle,WA,98102,Apartment,1,0,1495,,47.623382,-122.323376
+"505-E-Denny-Way,-Apt-102,-Seattle,-WA-98122","505 E Denny Way, Apt 102, Seattle, WA 98122",505 E Denny Way,Seattle,WA,98122,Single Family,1,2,2450,744,47.618318,-122.324921
+"5051-7th-Ave-NE,-Seattle,-WA-98105","5051 7th Ave NE, Seattle, WA 98105",5051 7th Ave NE,Seattle,WA,98105,Single Family,2,4,3595,2000,47.666597,-122.320871
+"506-E-Union-St,-Seattle,-WA-98122","506 E Union St, Seattle, WA 98122",506 E Union St,Seattle,WA,98122,Apartment,1,1,1450,,47.613097,-122.325205
+"507-22nd-Ave,-Seattle,-WA-98122","507 22nd Ave, Seattle, WA 98122",507 22nd Ave,Seattle,WA,98122,Apartment,1,1,1525,,47.606518,-122.304062
+"507-Harvard-Ave-E,-Seattle,-WA-98102","507 Harvard Ave E, Seattle, WA 98102",507 Harvard Ave E,Seattle,WA,98102,Apartment,1,2,2200,,47.623377,-122.322326
+"509-19th-Ave-E,-Seattle,-WA-98112","509 19th Ave E, Seattle, WA 98112",509 19th Ave E,Seattle,WA,98112,Apartment,1,2,2295,,47.623649,-122.307748
+"510-4th-Ave-W,-Seattle,-WA-98119","510 4th Ave W, Seattle, WA 98119",510 4th Ave W,Seattle,WA,98119,Apartment,2,2,2999,,47.623879,-122.361562
+"5112-Ravenna-Ave-NE,-Seattle,-WA-98105","5112 Ravenna Ave NE, Seattle, WA 98105",5112 Ravenna Ave NE,Seattle,WA,98105,Apartment,1,1,1350,,47.666152,-122.303013
+"5121-17th-Ave-NW,-Seattle,-WA-98107","5121 17th Ave NW, Seattle, WA 98107",5121 17th Ave NW,Seattle,WA,98107,Apartment,1,1,1450,,47.666083,-122.379165
+"5123-24th-Ave-NE,-Seattle,-WA-98105","5123 24th Ave NE, Seattle, WA 98105",5123 24th Ave NE,Seattle,WA,98105,Apartment,1,2,1650,,47.666561,-122.302307
+"515-E-Denny-Way,-Seattle,-WA-98122","515 E Denny Way, Seattle, WA 98122",515 E Denny Way,Seattle,WA,98122,Apartment,1,0,1495,,47.618265,-122.324451
+"515-Harvard-Ave-E,-Seattle,-WA-98102","515 Harvard Ave E, Seattle, WA 98102",515 Harvard Ave E,Seattle,WA,98102,Apartment,,,2311,,47.623621,-122.322322
+"516-E-Union-St,-Seattle,-WA-98122","516 E Union St, Seattle, WA 98122",516 E Union St,Seattle,WA,98122,Apartment,1,0,1295,475,47.613193,-122.324771
+"519-N-Bowdoin-Pl,-Seattle,-WA-98103","519 N Bowdoin Pl, Seattle, WA 98103",519 N Bowdoin Pl,Seattle,WA,98103,Apartment,1,2,2495,,47.654449,-122.351776
+"520-Terry-Ave,-Seattle,-WA-98104","520 Terry Ave, Seattle, WA 98104",520 Terry Ave,Seattle,WA,98104,Apartment,,,2335,,47.60589,-122.32282
+"5205-39th-Ave-S,-Seattle,-WA-98118","5205 39th Ave S, Seattle, WA 98118",5205 39th Ave S,Seattle,WA,98118,Apartment,1,1,1850,,47.555253,-122.283929
+"521-S-Weller-St,-Seattle,-WA-98104","521 S Weller St, Seattle, WA 98104",521 S Weller St,Seattle,WA,98104,Apartment,1,0,1886,,47.59708,-122.32704
+"5216-Brooklyn-Ave-NE,-Seattle,-WA-98105","5216 Brooklyn Ave NE, Seattle, WA 98105",5216 Brooklyn Ave NE,Seattle,WA,98105,Single Family,1,0,1500,,47.666961,-122.313848
+"522-N-85th-St,-Seattle,-WA-98103","522 N 85th St, Seattle, WA 98103",522 N 85th St,Seattle,WA,98103,Apartment,1,1,1926,,47.691064,-122.351865
+"5227-Leary-Ave-NW,-Seattle,-WA-98107","5227 Leary Ave NW, Seattle, WA 98107",5227 Leary Ave NW,Seattle,WA,98107,Apartment,1,0,1195,,47.666114,-122.381881
+"523-Broadway-E,-Seattle,-WA-98102","523 Broadway E, Seattle, WA 98102",523 Broadway E,Seattle,WA,98102,Apartment,1,,1712,,47.623697,-122.321487
+"5231-40th-Ave-NE,-Seattle,-WA-98105","5231 40th Ave NE, Seattle, WA 98105",5231 40th Ave NE,Seattle,WA,98105,Apartment,1,2,2250,,47.667663,-122.285074
+"5233-15th-Ave-NE,-Seattle,-WA-98105","5233 15th Ave NE, Seattle, WA 98105",5233 15th Ave NE,Seattle,WA,98105,Apartment,1,1,1350,,47.66739,-122.31223
+"5235-17th-Ave-NE,-Seattle,-WA-98105","5235 17th Ave NE, Seattle, WA 98105",5235 17th Ave NE,Seattle,WA,98105,Apartment,1,1,1550,,47.667455,-122.309947
+"525-Ne-Northgate-Way,-Seattle,-WA-98125","525 Ne Northgate Way, Seattle, WA 98125",525 Ne Northgate Way,Seattle,WA,98125,Apartment,1,,1395,,47.70826,-122.32161
+"5250-5252-Brooklyn-Ave-N,-Seattle,-WA-98105","5250 5252 Brooklyn Ave N, Seattle, WA 98105",5250 5252 Brooklyn Ave N,Seattle,WA,98105,Apartment,3,7,5950,,47.667941,-122.313833
+"5256-University-Way-NE,-Apt-202,-Seattle,-WA-98105","5256 University Way NE, Apt 202, Seattle, WA 98105",5256 University Way NE,Seattle,WA,98105,Apartment,2,2,1900,950,47.66805,-122.31268
+"526-W-Mercer-Pl,-Apt-403,-Seattle,-WA-98119","526 W Mercer Pl, Apt 403, Seattle, WA 98119",526 W Mercer Pl,Seattle,WA,98119,Apartment,2,2,2355,931,47.625204,-122.364159
+"527-1st-Ave-N,-Seattle,-WA-98109","527 1st Ave N, Seattle, WA 98109",527 1st Ave N,Seattle,WA,98109,Apartment,1,0,1265,,47.624068,-122.355785
+"527-Eastlake-Ave-E,-Seattle,-WA-98109","527 Eastlake Ave E, Seattle, WA 98109",527 Eastlake Ave E,Seattle,WA,98109,Apartment,1,1,1432,,47.623976,-122.329526
+"530-W-Olympic-Pl,-Apt-214,-Seattle,-WA-98119","530 W Olympic Pl, Apt 214, Seattle, WA 98119",530 W Olympic Pl,Seattle,WA,98119,Single Family,1,1,1875,650,47.627319,-122.364359
+"531-Malden-Ave-E,-Seattle,-WA-98112","531 Malden Ave E, Seattle, WA 98112",531 Malden Ave E,Seattle,WA,98112,Apartment,1,0,1450,,47.624103,-122.313917
+"5312-9th-Ave-NE,-Seattle,-WA-98105","5312 9th Ave NE, Seattle, WA 98105",5312 9th Ave NE,Seattle,WA,98105,Apartment,1,0,1150,,47.667563,-122.318105
+"5319-24th-Ave-NE,-Seattle,-WA-98105","5319 24th Ave NE, Seattle, WA 98105",5319 24th Ave NE,Seattle,WA,98105,Apartment,1,2,1895,,47.667691,-122.302192
+"5325-Ravenna-Pl-NE,-Seattle,-WA-98105","5325 Ravenna Pl NE, Seattle, WA 98105",5325 Ravenna Pl NE,Seattle,WA,98105,Apartment,1,2,1695,,47.667683,-122.302925
+"535-Pontius-Ave-N,-Seattle,-WA-98109","535 Pontius Ave N, Seattle, WA 98109",535 Pontius Ave N,Seattle,WA,98109,Apartment,2,2,2209,1063,47.623695,-122.332083
+"538-Lakeside-Ave-S,-Seattle,-WA-98144","538 Lakeside Ave S, Seattle, WA 98144",538 Lakeside Ave S,Seattle,WA,98144,Apartment,1,1,2700,670,47.59664,-122.28696
+"5398-Russell-Ave-NW,-Seattle,-WA-98107","5398 Russell Ave NW, Seattle, WA 98107",5398 Russell Ave NW,Seattle,WA,98107,Apartment,2,2,4080,942,47.66798,-122.38137
+"5413-21st-Ave-NE,-Seattle,-WA-98105","5413 21st Ave NE, Seattle, WA 98105",5413 21st Ave NE,Seattle,WA,98105,Single Family,2,8,4395,2820,47.668425,-122.305796
+"5505-15th-Ave-NE,-Seattle,-WA-98105","5505 15th Ave NE, Seattle, WA 98105",5505 15th Ave NE,Seattle,WA,98105,Apartment,1,1,1595,,47.668704,-122.312212
+"5536-Canfield-Pl-N,-Seattle,-WA-98103","5536 Canfield Pl N, Seattle, WA 98103",5536 Canfield Pl N,Seattle,WA,98103,Single Family,2,4,4800,2180,47.669625,-122.335582
+"5555-14th-Ave-NW,-Seattle,-WA-98107","5555 14th Ave NW, Seattle, WA 98107",5555 14th Ave NW,Seattle,WA,98107,Apartment,2,2,2900,964,47.669077,-122.374298
+"5616-University-Way-NE,-Seattle,-WA-98105","5616 University Way NE, Seattle, WA 98105",5616 University Way NE,Seattle,WA,98105,Apartment,1,0,1150,,47.670019,-122.312676

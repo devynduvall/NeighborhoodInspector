@@ -54,9 +54,6 @@ def index():
         # Query the restaurants that match the rental_id
         data = Restaurant.query.filter_by(id = Connector.query.filter_by(rental_id = marker_id))
     
-    # Print the rentals to the console
-    print(rent)
-    
     # Render the index.html template with the rentals, marker_id, and data variables
     return render_template('index.html', markers = feature_collection, marker_match = marker_id, marker_match_data = data)
 
@@ -96,16 +93,48 @@ def get_marker_points(marker_id):
     # Return the serialized data to the client-side JavaScript code
     return jsonify(feature_collection)
 
-# Define a route for the search functionality
-@app.route('/search', methods=['POST'])
-def search():
-    # Get the search term from the form data
-    search_term = request.form['search_term']
+# # Define a route for the search functionality
+# @app.route('/search', methods=['GET', 'POST'])
+# def search():
+#     if request.method == 'GET':
+#         # Get the search term from the query string parameters
+#         search_term = request.args.get('search_term')
+#     elif request.method == 'POST':
+#         # Get the search term from the form data
+#         search_term = request.form['search_term']
 
-    # Query the rentals that match the search term
+#     # Query the database for the coordinates of the searched term
+#     data = db.session.query(Rental).filter(Rental.address.ilike(f"%{search_term}%")).all()
+
+#     feature_collection = {
+#         "type": "FeatureCollection",
+#         "features": [
+#             {
+#                 "type": "Feature",
+#                 "geometry": {
+#                     "type": "Point",
+#                     "coordinates": [point.lat, point.lon]
+#                 },
+#                 "properties": {
+#                     "id": point.id,
+#                     "address": point.address,
+#                     "name": point.name
+#                 }
+#             }
+#             for point in data
+#         ]
+#     }
+
+#     # Return the coordinates to the front-end
+#     return jsonify(feature_collection)
+
+@app.route('/search/<string:search_term>', methods=['GET', 'POST'])
+def search(search_term):
+
+        # Query the database for the rentals that match the search term
     data = db.session.query(Rental).filter(Rental.address.ilike(f"%{search_term}%")).all()
-    print(data)
-    
+
+    # Create a GeoJSON feature collection for the matching rentals
     feature_collection = {
         "type": "FeatureCollection",
         "features": [
@@ -119,13 +148,13 @@ def search():
                     "id": point.id,
                     "address": point.address,
                     "name": point.name
-                    
                 }
             }
             for point in data
         ]
     }
-    # Return the search term and data to the client-side JavaScript code
+
+    # Return the GeoJSON feature collection to the front-end
     return jsonify(feature_collection)
 
 # Define a route to serve the markers as a feature collection
