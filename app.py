@@ -2,33 +2,33 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, f
 from flask_sqlalchemy import SQLAlchemy
 
 from flask_migrate import Migrate
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash 
 # Import Flask, render_template, request, and jsonify modules
 from flask import Flask, render_template, request, jsonify
 # Import the app, db, Rental, Restaurant, and Connector modules from the app package
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField, BooleanField, ValidationError, TextAreaField
-from wtforms.validators import DataRequired, EqualTo, Length
-from wtforms.widgets import TextArea
-from flask_ckeditor import CKEditorField
-from flask_wtf.file import FileField
 from webforms import LoginForm, UserForm, FilteringForm
-
-
-from Data_Manip.update_db import insert_data
 
 
 from dotenv import load_dotenv
 import os
 
+# Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = "mysecretkey that you aren't able to understand"
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost:5433/rentalrestaurant'
+app.config['SECRET_KEY'] = "mysecretkey"
 
-# Flask_Login Stuff
+# Initialize the database and migration
+db = SQLAlchemy(app)
+migrate = Migrate(app, db)
+
+# Import models after initializing the db to avoid circular import
+from models import Rental, Restaurant, Connector, Users
+
+# Flask-Login setup
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
@@ -36,10 +36,6 @@ login_manager.login_view = 'login'
 @login_manager.user_loader
 def load_user(user_id):
 	return Users.query.get(int(user_id))
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://myuser:mypassword@localhost:5433/mydatabase'
-
-db = SQLAlchemy(app)  # Initialize the database
 
 # Create Login Page
 @app.route('/login', methods=['GET', 'POST'])
@@ -204,7 +200,7 @@ def index(marker_id=None):
                         "id": point.id,
                         "address": point.address_street,
                         "name": point.name,
-                        "cuisine": point.cuisine,
+                        # "cuisine": point.cuisine,
                         "website": point.website,
                         "phone": point.phone
                     }
@@ -342,9 +338,5 @@ def add_user():
 def about():
     return render_template('about.html')
 
-
-
-
-
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, port=5000)
