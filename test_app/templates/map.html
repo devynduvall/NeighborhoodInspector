@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<style>
+    #map {
+        height: 600px;
+        width: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h2>Shop Locations</h2>
+<div id="map"></div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script>
+    // Initialize the map
+    var map = L.map('map').setView([0, 0], 2); // Centered at (0,0) with zoom level 2
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add shop markers
+    var shops = {{ shops| tojson }};
+    var markers = [];
+
+    shops.forEach(function (shop) {
+        if (shop.latitude && shop.longitude) {
+            var marker = L.marker([shop.latitude, shop.longitude]).addTo(map)
+                .bindPopup('<b>' + shop.shop_name + '</b>');
+            markers.push(marker);
+        }
+    });
+
+    // Adjust map view to fit all markers
+    var group = new L.featureGroup(markers);
+    if (markers.length > 0) {
+        map.fitBounds(group.getBounds().pad(0.5));
+    }
+</script>
+{% endblock %}
