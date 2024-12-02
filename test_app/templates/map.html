@@ -27,7 +27,7 @@
     }).addTo(map);
 
     // Add shop markers
-    var shops = {{ shops| tojson }};
+    var shops = {{ shops|tojson }};
     var markers = [];
 
     shops.forEach(function (shop) {
